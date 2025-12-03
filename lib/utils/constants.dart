@@ -9,3 +9,15 @@ class AppColors {
   static const Color textLight = Color(0xFF7F8C8D);
   static const Color border = Color(0xFFECF0F1);
 }
+class AppRoutes {
+  static const String home = '/';
+  static const String about = '/about';
+  static const String collections = '/collections';
+  static const String collectionDetail = '/collection/:id';
+  static const String product = '/product/:id';
+  static const String cart = '/cart';
+  static const String auth = '/auth';
+  static const String account = '/account';
+  static const String search = '/search';
+  static const String printShack = '/print-shack';
+}
