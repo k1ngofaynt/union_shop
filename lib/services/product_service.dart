@@ -20,6 +20,15 @@ class ProductService {
       collection: 'signature',
       isSale: false,
     ),
+    Product(
+      id: '3',
+      name: 'Essential T-Shirt',
+      description: 'Comfortable essential t-shirt for everyday wear',
+      price: 10.00,
+      image: ImageAssets.productEssentialTshirt,  // ← CHANGED FROM URL
+      collection: 'signature',
+      isSale: false,
+    ),
   ];
   static List<Product> get products => _products;
 }
