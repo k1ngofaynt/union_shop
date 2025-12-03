@@ -29,6 +29,15 @@ class ProductService {
       collection: 'signature',
       isSale: false,
     ),
+    Product(
+      id: '4',
+      name: 'Limited Edition Zip Hoodies',
+      description: 'Exclusive limited edition zip-up hoodies',
+      price: 20.00,
+      image: ImageAssets.productZipHoodies,  // ← CHANGED FROM URL
+      collection: 'signature',
+      isSale: false,
+    ),
   ];
   static List<Product> get products => _products;
 }
