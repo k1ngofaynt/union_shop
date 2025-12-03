@@ -14,4 +14,6 @@ class CartItemModel {
     required this.selectedSize,
     required this.selectedColor,
   });
+  
+  double get totalPrice => product.price * quantity;
 }
