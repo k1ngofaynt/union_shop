@@ -11,6 +11,15 @@ class ProductService {
       collection: 'graduation',
       isSale: false,
     ),
+     Product(
+      id: '2',
+      name: 'Signature Hoodie',
+      description: 'Essential signature hoodie in classic colors',
+      price: 32.99,
+      image: ImageAssets.productSignatureHoodie,  // ← CHANGED FROM URL
+      collection: 'signature',
+      isSale: false,
+    ),
   ];
   static List<Product> get products => _products;
 }
