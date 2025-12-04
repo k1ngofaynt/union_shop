@@ -135,6 +135,23 @@ class _AppShellState extends State<AppShell> {
       ),
     );
   }
+  Widget _buildContent() {
+    switch (widget.page) {
+      case 'about':
+        return const AboutPage();
+      case 'collections':
+        return const CollectionsPage();
+      case 'cart':
+        return const CartPage();
+      case 'product':
+        return ProductPage(productId: widget.productId ?? '');
+      case 'collectionDetail':
+        return CollectionDetailPage(collectionId: widget.collectionId ?? '');
+      default:
+        return const HomePage();
+    }
+  }
+}
 
 
       
