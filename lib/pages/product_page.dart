@@ -257,5 +257,18 @@ class _ProductPageState extends State<ProductPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+             const SizedBox(height: 12),
+            Row(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.remove),
+                  onPressed: () {
+                    if (_quantity > 1) {
+                      setState(() {
+                        _quantity--;
+                      });
+                    }
+                  },
+                ),
                   
 
