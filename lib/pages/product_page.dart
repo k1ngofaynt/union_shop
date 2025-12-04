@@ -182,5 +182,23 @@ class _ProductPageState extends State<ProductPage> {
                             : AppColors.border,
                         width: isSelected ? 2 : 1,
                       ),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Text(
+                      size,
+                      style: TextStyle(
+                        fontWeight: isSelected
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ],
+        ),
+        const SizedBox(height: 24),
+        
                   
 
