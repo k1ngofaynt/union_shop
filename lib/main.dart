@@ -45,4 +45,14 @@ class MyApp extends StatelessWidget {
         '/collections': (context) => const AppShell(page: 'collections'),
         '/cart': (context) => const AppShell(page: 'cart'),
       },
+       onGenerateRoute: (settings) {
+        if (settings.name?.startsWith('/product/') ?? false) {
+          final productId = settings.name?.split('/').last;
+          return MaterialPageRoute(
+            builder: (context) => AppShell(
+              page: 'product',
+              productId: productId,
+            ),
+          );
+        }
       
