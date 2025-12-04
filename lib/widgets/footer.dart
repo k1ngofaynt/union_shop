@@ -156,12 +156,12 @@ class Footer extends StatelessWidget {
         const SizedBox(height: 8),
         _footerText('Purchase online 24/7'),
         const SizedBox(height: 24),
-        _footerTitle('Shop'),
+        _footerTitle('Help and Information'),
         const SizedBox(height: 12),
-        _footerLink(context, 'Collections'),
-        _footerLink(context, 'Sale Items'),
+        _footerLink(context, 'Search'),
+        _footerLink(context, 'Terms & Conditions'),
         const SizedBox(height: 24),
-        _footerTitle('Newsletter'),
+        _footerTitle('Latest Offers'),
         const SizedBox(height: 12),
         TextField(
           decoration: InputDecoration(
