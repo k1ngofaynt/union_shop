@@ -122,5 +122,24 @@ class Footer extends StatelessWidget {
             filled: true,
           ),
         ),
+            const SizedBox(height: 8),
+        SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text('Subscribe'),
+          ),
+        ),
+        const SizedBox(height: 24),
+        Text(
+          '© 2025 Union Shop. All rights reserved.',
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Colors.white70,
+              ),
+        ),
+      ],
+    );
+  }
+  
   
   
