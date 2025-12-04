@@ -31,4 +31,13 @@ class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-  }}
+  return Container(
+      color: AppColors.primary,
+      padding: EdgeInsets.symmetric(
+        horizontal: isMobile ? 16 : 32,
+        vertical: 16,
+      ),
+      child: isMobile ? _buildMobileNavbar() : _buildDesktopNavbar(context),
+    );
+  }
+  
