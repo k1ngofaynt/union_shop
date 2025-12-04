@@ -29,7 +29,7 @@ class AboutPage extends StatelessWidget {
           const SizedBox(height: 32),
           Padding(
             padding: EdgeInsets.all(isMobile ? 16 : 48),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _ParagraphSection(
@@ -49,3 +49,23 @@ class AboutPage extends StatelessWidget {
     );
   }
 }
+class _ParagraphSection extends StatelessWidget {
+  final String content;
+
+  const _ParagraphSection({
+    Key? key,
+    required this.content,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      content,
+      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+        height: 1.8,
+        fontSize: 16,
+      ),
+    );
+  }
+}
+
