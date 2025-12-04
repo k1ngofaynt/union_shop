@@ -84,5 +84,21 @@ class AppShell extends StatefulWidget {
   @override
   State<AppShell> createState() => _AppShellState();
 }
+class _AppShellState extends State<AppShell> {
+  late String _currentRoute;
+
+  @override
+  void initState() {
+    super.initState();
+    _updateRoute();
+  }
+
+  @override
+  void didUpdateWidget(AppShell oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.page != widget.page) {
+      _updateRoute();
+    }
+  }
 
       
