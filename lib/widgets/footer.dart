@@ -166,11 +166,14 @@ class Footer extends StatelessWidget {
         TextField(
           decoration: InputDecoration(
             hintText: 'Enter your email',
+            hintStyle: TextStyle(color: Colors.grey[600]),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(4),
+               borderSide: BorderSide.none,
             ),
             fillColor: Colors.white,
             filled: true,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           ),
         ),
             const SizedBox(height: 8),
