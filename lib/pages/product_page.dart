@@ -1,25 +1,5 @@
 
- 
-                 
-                          const Spacer(),
-                          ConstrainedBox(
-                            constraints: const BoxConstraints(maxWidth: 600),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.search,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
+
                                 IconButton(
                                   icon: const Icon(
                                     Icons.person_outline,
