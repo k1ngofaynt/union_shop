@@ -35,15 +35,6 @@ class Footer extends StatelessWidget {
                   _footerText('Reopening 10am 05/01/2026'),
                   _footerText('Last post date: 12pm on 18/12/2025'),
                   const SizedBox(height: 12),
-                  
-                ],
-              ),
-            ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _footerTitle('Customer Service'),
                   const SizedBox(height: 12),
                   
                 ],
