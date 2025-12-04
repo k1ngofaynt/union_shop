@@ -138,3 +138,33 @@ class _CollectionCard extends StatelessWidget {
                 ),
               ),
             ),
+                    Positioned(
+              bottom: 16,
+              left: 16,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    collection.name,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    '${collection.productCount} products',
+                    style: const TextStyle(
+                      color: Colors.white70,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
