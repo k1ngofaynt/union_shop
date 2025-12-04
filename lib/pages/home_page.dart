@@ -14,3 +14,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late Future<List<Product>> _featuredProducts;
   late Future<List<Collection>> _collections;
+    @override
+  void initState() {
+    super.initState();
+    _featuredProducts = ProductService.getAllProducts();
+    _collections = ProductService.getAllCollections();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
