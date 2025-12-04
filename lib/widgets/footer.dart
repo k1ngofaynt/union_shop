@@ -27,7 +27,13 @@ class Footer extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  
+                  footerTitle('Opening Hours'),
+                  const SizedBox(height: 16),
+                  _footerText('❄️ Winter Break Closure Dates ❄️'),
+                  const SizedBox(height: 8),
+                  _footerText('Closing 4pm 19/12/2025'),
+                  _footerText('Reopening 10am 05/01/2026'),
+                  _footerText('Last post date: 12pm on 18/12/2025'),
                   const SizedBox(height: 12),
                   _footerLink(context, 'Collections'),
                   _footerLink(context, 'Sale Items'),
