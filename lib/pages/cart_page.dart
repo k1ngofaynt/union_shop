@@ -68,3 +68,16 @@ class _CartPageState extends State<CartPage> {
         ),
       );
     }
+     return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 16 : 32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Shopping Cart',
+              style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 32),
