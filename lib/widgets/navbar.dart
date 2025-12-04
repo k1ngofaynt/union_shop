@@ -79,6 +79,8 @@ class _NavbarState extends State<Navbar> {
               _navLink(context, 'Collections', '/collections'),
               const SizedBox(width: 24),
               _navLink(context, 'About', '/about'),
+              const SizedBox(width: 24),
+              _saleNavLink(context, 'SALE!', '/sale'),
             ],
           ),
         ),
