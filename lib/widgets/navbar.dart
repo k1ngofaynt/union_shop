@@ -151,3 +151,19 @@ class _NavbarState extends State<Navbar> {
       ],
     );
   }
+  Widget _navLink(BuildContext context, String label, String route) {
+    final isActive = widget.currentRoute == route;
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, route);
+      },
+      child: Text(
+        label,
+        style: TextStyle(
+          color: isActive ? AppColors.secondary : Colors.white,
+          fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+        ),
+      ),
+    );
+  }
+  
