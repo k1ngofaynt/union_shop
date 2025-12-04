@@ -31,13 +31,28 @@ class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-  return Container(
-      color: AppColors.primary,
-      padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? 16 : 32,
-        vertical: 16,
-      ),
-      child: isMobile ? _buildMobileNavbar() : _buildDesktopNavbar(context),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          color: const Color(0xFF4d2963),
+          child: const Text(
+            'BIG SALE! OUR ESSENTIAL RANGE HAS DROPPED IN PRICE! OVER 20% OFF! COME GRAB YOURS WHILE STOCK LASTS!',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 16),
+          ),
+        ),
+        Container(
+          color: AppColors.primary,
+          padding: EdgeInsets.symmetric(
+            horizontal: isMobile ? 16 : 32,
+            vertical: 16,
+          ),
+          child: isMobile ? _buildMobileNavbar() : _buildDesktopNavbar(context),
+        ),
+      ],
     );
   }
   Widget _buildDesktopNavbar(BuildContext context) {
