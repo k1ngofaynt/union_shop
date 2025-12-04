@@ -40,16 +40,16 @@ class ProductService {
       collection: 'signature',
       isSale: false,
     ),
-    Product(
-      id: '5',
-      name: 'Crested Tie',
-      description: 'Elegant crested tie with university logo',
-      price: 15.00,
-      originalPrice: 10.99,
-      image: ImageAssets.productCrestedTie, // ← CHANGED FROM URL
-      collection: 'graduation',
-      isSale: true,
-    ),
+   Product(
+  id: '5',
+  name: 'Crested Tie',
+  description: 'Elegant crested tie with university logo',
+  price: 10.99,  // Changed from 15.00
+  originalPrice: 15.00,  // Changed from 10.99
+  image: ImageAssets.productCrestedTie,
+  collection: 'graduation',
+  isSale: true,
+),
   ];
   static final List<Collection> _collections = [
     Collection(
