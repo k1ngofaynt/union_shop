@@ -9,7 +9,7 @@ class Footer extends StatelessWidget {
     final isMobile = MediaQuery.of(context).size.width < 768;
 
     return Container(
-      color: AppColors.primary,
+      color: const Color(0xFF2C2C2C),
       padding: EdgeInsets.all(isMobile ? 24 : 48),
       child: isMobile ? _buildMobileFooter(context) : _buildDesktopFooter(context),
     );
