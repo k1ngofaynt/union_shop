@@ -104,15 +104,27 @@ class _NavbarState extends State<Navbar> {
         // Top row: Logo and menu button
         Row(
           children: [
-            Expanded(
+            const Expanded(
               child: Text(
                 'Union Shop',
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-  
+  IconButton(
+              icon: Icon(
+                _isMobileMenuOpen ? Icons.close : Icons.menu,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                setState(() {
+                  _isMobileMenuOpen = !_isMobileMenuOpen;
+                });
+              },
+            ),
+          ],
+        ),
   
