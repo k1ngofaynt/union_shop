@@ -97,3 +97,10 @@ class _SalePageState extends State<SalePage> {
               ),
             ),
           ),
+          if (_isLoading)
+            const Center(
+              child: Padding(
+                padding: EdgeInsets.all(40),
+                child: CircularProgressIndicator(),
+              ),
+            )
