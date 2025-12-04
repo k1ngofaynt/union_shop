@@ -18,3 +18,10 @@ class _SalePageState extends State<SalePage> {
     super.initState();
     _loadSaleProducts();
   }
+  Future<void> _loadSaleProducts() async {
+    final saleProducts = await ProductService.getSaleProducts();
+    setState(() {
+      _saleProducts = saleProducts;
+      _isLoading = false;
+    });
+  }
