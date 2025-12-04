@@ -54,3 +54,17 @@ class _NavbarState extends State<Navbar> {
                 ),
           ),
         ),
+        Expanded(
+          flex: 2,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _navLink(context, 'Home', '/'),
+              const SizedBox(width: 24),
+              _navLink(context, 'Collections', '/collections'),
+              const SizedBox(width: 24),
+              _navLink(context, 'About', '/about'),
+            ],
+          ),
+        ),
+        
