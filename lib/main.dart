@@ -69,5 +69,20 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+class AppShell extends StatefulWidget {
+  final String page;
+  final String? productId;
+  final String? collectionId;
+
+  const AppShell({
+    Key? key,
+    this.page = 'home',
+    this.productId,
+    this.collectionId,
+  }) : super(key: key);
+
+  @override
+  State<AppShell> createState() => _AppShellState();
+}
 
       
