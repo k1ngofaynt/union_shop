@@ -112,5 +112,18 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
                     ],
                   ),
                   const SizedBox(height: 24),
+                  // Products Grid
+                   FutureBuilder<List<Product>>(
+                  future: _products,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    if (snapshot.hasError) {
+                      return Text('Error: ${snapshot.error}');
+                    }
+                    if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                      return const Text('No products in this collection');
+                    }
                   
                         
