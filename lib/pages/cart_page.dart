@@ -233,3 +233,19 @@ class _CartItemWidget extends StatelessWidget {
         border: Border.all(color: AppColors.border),
         borderRadius: BorderRadius.circular(8),
       ),
+      child: Row(
+        children: [
+          Image.network(
+            item['image'],
+            width: 100,
+            height: 100,
+            fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) {
+              return Container(
+                width: 100,
+                height: 100,
+                color: AppColors.background,
+                child: const Icon(Icons.image_not_supported),
+              );
+            },
+          ),
