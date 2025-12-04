@@ -92,3 +92,23 @@ class _CollectionsPageState extends State<CollectionsPage> {
     );
   }
 }
+class _CollectionCard extends StatelessWidget {
+  final Collection collection;
+  final VoidCallback onTap;
+
+  const _CollectionCard({
+    Key? key,
+    required this.collection,
+    required this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColors.border),
+          borderRadius: BorderRadius.circular(8),
+          overflow: Overflow.hidden,
+        ),
