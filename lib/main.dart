@@ -18,20 +18,7 @@ void main() {
                         
 
             // Products Section
-            Container(
-              color: Colors.white,
-              child: Padding(
-                padding: const EdgeInsets.all(40.0),
-                child: Column(
-                  children: [
-                    const Text(
-                      'PRODUCTS SECTION',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        letterSpacing: 1,
-                      ),
-                    ),
+            
                     const SizedBox(height: 48),
                     GridView.count(
                       shrinkWrap: true,
