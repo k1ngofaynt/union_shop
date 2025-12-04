@@ -68,3 +68,21 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
               );
             },
           ),
+          const SizedBox(height: 32),
+          // Filters and Sort
+          Padding(
+            padding: EdgeInsets.all(isMobile ? 16 : 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (!isMobile)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Sort by:',
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
+                       DropdownButton<String>(
+                        value: _sortBy,
+                        
