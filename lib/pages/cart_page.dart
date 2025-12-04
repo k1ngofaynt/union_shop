@@ -273,3 +273,19 @@ class _CartItemWidget extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(width: 16),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.remove),
+                    constraints: const BoxConstraints(),
+                    padding: const EdgeInsets.all(4),
+                    onPressed: () {
+                      if (item['quantity'] > 1) {
+                        onQuantityChanged(item['quantity'] - 1);
+                      }
+                    },
+                  ),
