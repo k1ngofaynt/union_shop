@@ -55,4 +55,19 @@ class MyApp extends StatelessWidget {
             ),
           );
         }
+        if (settings.name?.startsWith('/collection/') ?? false) {
+          final collectionId = settings.name?.split('/').last;
+          return MaterialPageRoute(
+            builder: (context) => AppShell(
+              page: 'collectionDetail',
+              collectionId: collectionId,
+            ),
+          );
+        }
+        return null;
+      },
+    );
+  }
+}
+
       
