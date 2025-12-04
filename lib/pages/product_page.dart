@@ -1,17 +1,3 @@
-import 'package:flutter/material.dart';
-
-class ProductPage extends StatelessWidget {
-  final String productId;
-  
-  const ProductPage({super.key, required this.productId});
-
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
-  void placeholderCallbackForButtons() {
-    // This is the event handler for buttons that don't work yet
-  }
 
   @override
   Widget build(BuildContext context) {
