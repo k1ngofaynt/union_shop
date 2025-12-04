@@ -300,3 +300,17 @@ class _CartItemWidget extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 8),
+              IconButton(
+                icon: const Icon(Icons.delete, color: AppColors.accent),
+                onPressed: onRemove,
+                constraints: const BoxConstraints(),
+                padding: const EdgeInsets.all(4),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
