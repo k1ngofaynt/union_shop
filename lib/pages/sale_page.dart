@@ -53,3 +53,14 @@ class _SalePageState extends State<SalePage> {
               ),
               borderRadius: BorderRadius.circular(8),
             ),
+            child: Column(
+              children: [
+                Text(
+                  'SALE!',
+                  style: TextStyle(
+                    fontSize: isMobile ? 36 : 48,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    letterSpacing: 2,
+                  ),
+                ),
