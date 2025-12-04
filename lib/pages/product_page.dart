@@ -74,4 +74,12 @@ class _ProductPageState extends State<ProductPage> {
             },
           ),
         ),
+        const SizedBox(width: 48),
+        Expanded(
+          flex: 1,
+          child: _buildProductDetails(product),
+        ),
+      ],
+    );
+  }
 
