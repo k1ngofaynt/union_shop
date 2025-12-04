@@ -74,3 +74,15 @@ class _SalePageState extends State<SalePage> {
                   ),
                   textAlign: TextAlign.center,
                 ),
+                 const SizedBox(height: 8),
+                Text(
+                  'Grab yours while stock lasts!',
+                  style: TextStyle(
+                    fontSize: isMobile ? 14 : 16,
+                    color: Colors.white.withOpacity(0.9),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
