@@ -66,7 +66,7 @@ Product(
   description: 'Classic university t-shirt on sale',
   price: 6.99,
   originalPrice: 10.00,
-  image: ImageAssets.productEssentialTshirt,
+  image: ImageAssets.productSaleTshirt,
   collection: 'signature',
   isSale: true,
 ),
