@@ -70,3 +70,25 @@ class _CollectionsPageState extends State<CollectionsPage> {
                     crossAxisSpacing: 24,
                     childAspectRatio: 1.2,
                   ),
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (context, index) {
+                    final collection = snapshot.data![index];
+                    return _CollectionCard(
+                      collection: collection,
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          '/collection/${collection.id}',
+                        );
+                      },
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
