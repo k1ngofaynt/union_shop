@@ -115,3 +115,15 @@ class _SalePageState extends State<SalePage> {
                       size: 64,
                       color: Colors.grey[400],
                     ),
+                    const SizedBox(height: 16),
+                    Text(
+                      'No sale items available at the moment',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
