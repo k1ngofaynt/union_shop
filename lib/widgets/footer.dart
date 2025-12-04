@@ -34,3 +34,15 @@ class Footer extends StatelessWidget {
                 ],
               ),
             ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _footerTitle('Shop'),
+                  const SizedBox(height: 12),
+                  _footerLink(context, 'Collections'),
+                  _footerLink(context, 'Sale Items'),
+                  _footerLink(context, 'New Arrivals'),
+                ],
+              ),
+            ),
