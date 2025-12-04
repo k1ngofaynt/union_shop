@@ -32,3 +32,29 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
+     return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 16 : 32),
+        child: FutureBuilder<Product?>(
+          future: _product,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            }
+            if (!snapshot.hasData || snapshot.data == null) {
+              return const Text('Product not found');
+            }
+
+            final product = snapshot.data!;
+            return isMobile
+                ? _buildMobileLayout(product)
+                : _buildDesktopLayout(product);
+          },
+        ),
+      ),
+    );
+  }
+
