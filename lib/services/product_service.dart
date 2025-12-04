@@ -84,4 +84,12 @@ class ProductService {
   static Future<List<Collection>> getAllCollections() async {
     return _collections;
   }
+  
+  static Future<Product?> getProductById(String id) async {
+    try {
+      return _products.firstWhere((product) => product.id == id);
+    } catch (e) {
+      return null;
+    }
+  }
 }
