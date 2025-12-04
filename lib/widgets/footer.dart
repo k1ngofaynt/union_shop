@@ -129,6 +129,14 @@ class Footer extends StatelessWidget {
                 color: Colors.white70,
               ),
         ),
+        const SizedBox(height: 4),
+        Text(
+          'Powered by Shopify',
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Colors.white70,
+                fontSize: 12,
+              ),
+        ),
       ],
     );
   }
