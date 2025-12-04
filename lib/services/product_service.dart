@@ -50,6 +50,16 @@ class ProductService {
   collection: 'graduation',
   isSale: true,
 ),
+Product(
+  id: '6',
+  name: 'Essential Hoodie',
+  description: 'Premium essential hoodie with university branding',
+  price: 24.99,
+  originalPrice: 32.00,
+  image: ImageAssets.productSignatureHoodie,
+  collection: 'signature',
+  isSale: true,
+),
   ];
   static final List<Collection> _collections = [
     Collection(
