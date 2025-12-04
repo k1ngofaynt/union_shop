@@ -98,5 +98,21 @@ class _NavbarState extends State<Navbar> {
       ],
     );
   }
+  Widget _buildMobileNavbar() {
+    return Column(
+      children: [
+        // Top row: Logo and menu button
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                'Union Shop',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
   
   
