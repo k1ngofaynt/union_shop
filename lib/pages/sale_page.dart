@@ -35,6 +35,21 @@ class _SalePageState extends State<SalePage> {
         horizontal: isMobile ? 16 : 64,
         vertical: 32,
       ),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(40),
+            margin: const EdgeInsets.only(bottom: 40),
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  const Color(0xFF4d2963),
+                  const Color(0xFF6B3A82),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(8),
+            ),
