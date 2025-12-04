@@ -109,6 +109,9 @@ Product(
     return _collections;
   }
 
+  static Future<List<Product>> getSaleProducts() async {
+  return _products.where((product) => product.isSale).toList();
+}
   static Future<Product?> getProductById(String id) async {
     try {
       return _products.firstWhere((product) => product.id == id);
