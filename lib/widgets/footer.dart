@@ -192,6 +192,18 @@ class Footer extends StatelessWidget {
             child: const Text('SUBSCRIBE'),
           ),
         ),
+        const SizedBox(height: 16),
+        Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.facebook, color: Colors.white),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.tag, color: Colors.white),
+              onPressed: () {},
+            ),
+          ],
         ),
         const SizedBox(height: 24),
         Text(
