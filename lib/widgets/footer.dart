@@ -99,7 +99,7 @@ class Footer extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.tag, color: Colors.white),
                     onPressed: () {},
-                    child: const Text('Subscribe'),
+                    tooltip: 'Twitter',
                   ),
                 ],
               ),
