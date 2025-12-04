@@ -118,6 +118,23 @@ class _AppShellState extends State<AppShell> {
         _currentRoute = '/';
     }
   }
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Union Shop'),
+      ),
+      body: Column(
+        children: [
+          Navbar(currentRoute: _currentRoute),
+          Expanded(
+            child: _buildContent(),
+          ),
+          const Footer(),
+        ],
+      ),
+    );
+  }
 
 
       
