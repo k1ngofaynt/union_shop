@@ -104,3 +104,14 @@ class _SalePageState extends State<SalePage> {
                 child: CircularProgressIndicator(),
               ),
             )
+            else if (_saleProducts.isEmpty)
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(40),
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.inbox_outlined,
+                      size: 64,
+                      color: Colors.grey[400],
+                    ),
