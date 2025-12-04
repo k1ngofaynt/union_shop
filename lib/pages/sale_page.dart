@@ -25,3 +25,13 @@ class _SalePageState extends State<SalePage> {
       _isLoading = false;
     });
   }
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(
+        horizontal: isMobile ? 16 : 64,
+        vertical: 32,
+      ),
