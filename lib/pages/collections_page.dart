@@ -9,3 +9,15 @@ class CollectionsPage extends StatefulWidget {
   @override
   State<CollectionsPage> createState() => _CollectionsPageState();
 }
+class _CollectionsPageState extends State<CollectionsPage> {
+  late Future<List<Collection>> _collections;
+
+  @override
+  void initState() {
+    super.initState();
+    _collections = ProductService.getAllCollections();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
