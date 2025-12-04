@@ -60,6 +60,16 @@ Product(
   collection: 'signature',
   isSale: true,
 ),
+Product(
+  id: '7',
+  name: 'Sale T-Shirt',
+  description: 'Classic university t-shirt on sale',
+  price: 6.99,
+  originalPrice: 10.00,
+  image: ImageAssets.productEssentialTshirt,
+  collection: 'signature',
+  isSale: true,
+),
   ];
   static final List<Collection> _collections = [
     Collection(
