@@ -244,6 +244,18 @@ class Footer extends StatelessWidget {
       ),
     );
   }
+   Widget _footerText(String text) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 2),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Colors.white70,
+          fontSize: 13,
+        ),
+      ),
+    );
+  }
 
   Widget _footerLink(BuildContext context, String label) {
     return Padding(
