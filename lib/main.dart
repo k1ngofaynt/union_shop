@@ -121,9 +121,6 @@ class _AppShellState extends State<AppShell> {
    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Union Shop'),
-      ),
       body: Column(
         children: [
           Navbar(currentRoute: _currentRoute),
