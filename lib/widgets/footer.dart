@@ -61,8 +61,10 @@ class Footer extends StatelessWidget {
                         child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Enter your email',
+                      hintStyle: TextStyle(color: Colors.grey[600]),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(4),
+                         borderSide: BorderSide.none,
                       ),
                       fillColor: Colors.white,
                       filled: true,
