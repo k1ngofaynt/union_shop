@@ -107,10 +107,10 @@ class _CollectionCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.border),
           borderRadius: BorderRadius.circular(8),
-          overflow: Overflow.hidden,
         ),
         child: Stack(
           children: [

@@ -80,4 +80,8 @@ class ProductService {
   static Future<List<Product>> getProductsByCollection(String collectionId) async {
     return _products.where((product) => product.collection == collectionId).toList();
   }
+  
+  static Future<List<Collection>> getAllCollections() async {
+    return _collections;
+  }
 }
