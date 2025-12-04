@@ -116,5 +116,15 @@ class _HomePageState extends State<HomePage> {
                     if (!snapshot.hasData || snapshot.data!.isEmpty) {
                       return const Text('No products available');
                     }
+                    return GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: isMobile ? 2 : 4,
+                        mainAxisSpacing: 16,
+                        crossAxisSpacing: 16,
+                        childAspectRatio: 0.75,
+                      ),
+                    
 
                 
