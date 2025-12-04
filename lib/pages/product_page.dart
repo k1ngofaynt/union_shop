@@ -82,4 +82,21 @@ class _ProductPageState extends State<ProductPage> {
       ],
     );
   }
+  Widget _buildMobileLayout(Product product) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.network(
+          product.image,
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: 400,
+          errorBuilder: (context, error, stackTrace) {
+            return Container(
+              color: AppColors.background,
+              height: 400,
+              child: const Icon(Icons.image_not_supported),
+            );
+          },
+        ),
 
