@@ -199,6 +199,14 @@ class _ProductPageState extends State<ProductPage> {
           ],
         ),
         const SizedBox(height: 24),
-        
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Color',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),)
                   
 
