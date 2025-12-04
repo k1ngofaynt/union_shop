@@ -103,3 +103,33 @@ class _CartPageState extends State<CartPage> {
       ),
     );
   }
+  Widget _buildMobileCart() {
+    return Column(
+      children: [
+        _buildCartItems(),
+        const SizedBox(height: 32),
+        _buildOrderSummary(),
+      ],
+    );
+  }
+  Widget _buildCartItems() {
+    return Column(
+      children: cartItems.asMap().entries.map((entry) {
+        final index = entry.key;
+        final item = entry.value;
+        return _CartItemWidget(
+          item: item,
+          onRemove: () {
+            setState(() {
+              cartItems.removeAt(index);
+            });
+          },
+          onQuantityChanged: (newQuantity) {
+            setState(() {
+              cartItems[index]['quantity'] = newQuantity;
+            });
+          },
+        );
+      }).toList(),
+    );
+  }
