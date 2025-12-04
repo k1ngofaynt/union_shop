@@ -125,4 +125,15 @@ class _ProductPageState extends State<ProductPage> {
                   fontSize: 16,
                 ),
               ),
+              const SizedBox(width: 16),
+              Text(
+                '\$${product.price.toStringAsFixed(2)}',
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: AppColors.accent,
+                ),
+              ),
+            ],
+          )
 
