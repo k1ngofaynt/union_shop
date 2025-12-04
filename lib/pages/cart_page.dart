@@ -149,3 +149,27 @@ class _CartPageState extends State<CartPage> {
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(height: 16),
+          _summaryRow('Subtotal', '\$${subtotal.toStringAsFixed(2)}'),
+          const SizedBox(height: 8),
+          _summaryRow('Tax (10%)', '\$${tax.toStringAsFixed(2)}'),
+          const Divider(),
+          _summaryRow(
+            'Total',
+            '\$${total.toStringAsFixed(2)}',
+            isBold: true,
+          ),
+          const SizedBox(height: 24),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Order placed successfully!'),
+                  ),
+                );
+              },
+              child: const Text('Proceed to Checkout'),
+            ),
+          ),
