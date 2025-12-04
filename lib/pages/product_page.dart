@@ -99,4 +99,9 @@ class _ProductPageState extends State<ProductPage> {
             );
           },
         ),
+        const SizedBox(height: 24),
+        _buildProductDetails(product),
+      ],
+    );
+  }
 
