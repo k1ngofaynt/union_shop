@@ -46,3 +46,15 @@ class Footer extends StatelessWidget {
                 ],
               ),
             ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _footerTitle('Customer Service'),
+                  const SizedBox(height: 12),
+                  _footerLink(context, 'FAQ'),
+                  _footerLink(context, 'Shipping Info'),
+                  _footerLink(context, 'Returns'),
+                ],
+              ),
+            ),
