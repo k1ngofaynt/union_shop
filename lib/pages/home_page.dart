@@ -13,12 +13,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late Future<List<Product>> _featuredProducts;
-  late Future<List<Collection>> _collections;
+  // Collections for navigation - can be expanded later
+  final List<Collection> _collections = [];
+  
+  // Helper to get available collections
+  List<Collection> get collections => _collections;
     @override
   void initState() {
     super.initState();
-    _featuredProducts = ProductService.getAllProducts();
-    _collections = ProductService.getAllCollections();
+    _featuredProducts = Future.value(ProductService.products);
   }
 
   @override
