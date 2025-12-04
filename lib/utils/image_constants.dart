@@ -1,5 +1,4 @@
 class ImageAssets {
-  
   static const String productGraduationHoodies =
       'assets/images/products/product_graduation_hoodies.png';
   static const String productSignatureHoodie =
@@ -16,9 +15,6 @@ class ImageAssets {
       'assets/images/collections/collection_signature_banner.png';
   static const String collectionSaleBanner =
       'assets/images/collections/collection_sale_banner.png';
-  static const String productEssentialHoodie =
-    'assets/images/product_essential_hoodie.png';
-static const String productSaleTshirt =
-    'assets/images/product_sale_tshirt.png';    
-
+  static const String productSaleTshirt =
+      'assets/images/product_sale_tshirt.png';
 }
