@@ -64,3 +64,13 @@ class _SalePageState extends State<SalePage> {
                     letterSpacing: 2,
                   ),
                 ),
+                onst SizedBox(height: 16),
+                Text(
+                  'Dont miss out! Get yours before they are all gone!',
+                  style: TextStyle(
+                    fontSize: isMobile ? 18 : 24,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
