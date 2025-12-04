@@ -73,7 +73,31 @@ class Footer extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  ElevatedButton(
+                   ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                        ),
+                        child: const Text('SUBSCRIBE'),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+                  // Social Media
+                  Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.facebook, color: Colors.white),
+                        onPressed: () {},
+                        tooltip: 'Facebook',
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.tag, color: Colors.white),
                     onPressed: () {},
                     child: const Text('Subscribe'),
                   ),
