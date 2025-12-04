@@ -127,4 +127,27 @@ class _NavbarState extends State<Navbar> {
             ),
           ],
         ),
-  
+  if (_isMobileMenuOpen) ...[
+          const SizedBox(height: 12),
+          // Search
+          TextField(
+            controller: _searchController,
+            decoration: InputDecoration(
+              hintText: 'Search...',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
+              filled: true,
+              fillColor: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 12),
+          // Menu items
+          _mobileNavLink('Home', '/'),
+          _mobileNavLink('Collections', '/collections'),
+          _mobileNavLink('About', '/about'),
+          _mobileNavLink('Cart', '/cart'),
+        ],
+      ],
+    );
+  }
