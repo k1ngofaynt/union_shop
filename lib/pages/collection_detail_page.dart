@@ -85,4 +85,30 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
                       ),
                        DropdownButton<String>(
                         value: _sortBy,
+                        items: const [
+                          DropdownMenuItem(
+                            value: 'featured',
+                            child: Text('Featured'),
+                          ),
+                          DropdownMenuItem(
+                            value: 'price-low',
+                            child: Text('Price: Low to High'),
+                          ),
+                          DropdownMenuItem(
+                            value: 'price-high',
+                            child: Text('Price: High to Low'),
+                          ),
+                          DropdownMenuItem(
+                            value: 'newest',
+                            child: Text('Newest'),
+                          ),
+                        ],
+                        onChanged: (value) {
+                          setState(() {
+                            _sortBy = value ?? 'featured';
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                         
