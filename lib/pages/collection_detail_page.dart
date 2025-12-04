@@ -30,3 +30,19 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          // Header
+          FutureBuilder<Collection?>(
+            future: _collection,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              if (!snapshot.hasData || snapshot.data == null) {
+                return const Text('Collection not found');
+              }
+
+              final collection = snapshot.data!;
+              
