@@ -259,7 +259,7 @@ class Footer extends StatelessWidget {
 
   Widget _footerLink(BuildContext context, String label) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 6),
       child: InkWell(
         onTap: () {},
         child: Text(
@@ -267,6 +267,7 @@ class Footer extends StatelessWidget {
           style: const TextStyle(
             color: Colors.white70,
             fontSize: 14,
+             decoration: TextDecoration.underline,
           ),
         ),
       ),
