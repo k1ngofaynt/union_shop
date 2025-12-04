@@ -35,9 +35,7 @@ class Footer extends StatelessWidget {
                   _footerText('Reopening 10am 05/01/2026'),
                   _footerText('Last post date: 12pm on 18/12/2025'),
                   const SizedBox(height: 12),
-                  _footerLink(context, 'Collections'),
-                  _footerLink(context, 'Sale Items'),
-                  _footerLink(context, 'New Arrivals'),
+                  
                 ],
               ),
             ),
@@ -47,9 +45,7 @@ class Footer extends StatelessWidget {
                 children: [
                   _footerTitle('Customer Service'),
                   const SizedBox(height: 12),
-                  _footerLink(context, 'FAQ'),
-                  _footerLink(context, 'Shipping Info'),
-                  _footerLink(context, 'Returns'),
+                  
                 ],
               ),
             ),
