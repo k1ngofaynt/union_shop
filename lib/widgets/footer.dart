@@ -218,9 +218,17 @@ class Footer extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          '© 2025 Union Shop. All rights reserved.',
+          '© 2025, upsu-store',
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
                 color: Colors.white70,
+              ),
+        ),
+         const SizedBox(height: 4),
+        Text(
+          'Powered by Shopify',
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Colors.white70,
+                fontSize: 12,
               ),
         ),
       ],
