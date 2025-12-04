@@ -127,3 +127,13 @@ class _SalePageState extends State<SalePage> {
                 ),
               ),
             )
+            else
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: isMobile ? 1 : (MediaQuery.of(context).size.width < 1200 ? 2 : 3),
+                childAspectRatio: isMobile ? 0.85 : 0.75,
+                crossAxisSpacing: 24,
+                mainAxisSpacing: 24,
+              ),
