@@ -296,5 +296,17 @@ class _ProductPageState extends State<ProductPage> {
           ],
         ),
         const SizedBox(height: 32),
+        SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Added $_quantity x ${product.name} to cart',
+                  ),
+                ),
+              );
+            },
                   
 
