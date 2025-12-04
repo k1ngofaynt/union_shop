@@ -289,3 +289,14 @@ class _CartItemWidget extends StatelessWidget {
                       }
                     },
                   ),
+                  Text(item['quantity'].toString()),
+                  IconButton(
+                    icon: const Icon(Icons.add),
+                    constraints: const BoxConstraints(),
+                    padding: const EdgeInsets.all(4),
+                    onPressed: () {
+                      onQuantityChanged(item['quantity'] + 1);
+                    },
+                  ),
+                ],
+              ),
