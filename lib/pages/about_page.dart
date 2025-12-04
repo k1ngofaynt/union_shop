@@ -68,4 +68,3 @@ class _ParagraphSection extends StatelessWidget {
     );
   }
 }
-
