@@ -81,3 +81,25 @@ class _CartPageState extends State<CartPage> {
               ),
             ),
             const SizedBox(height: 32),
+            if (isMobile)
+              _buildMobileCart()
+            else
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: _buildCartItems(),
+                  ),
+                  const SizedBox(width: 48),
+                  Expanded(
+                    flex: 1,
+                    child: _buildOrderSummary(),
+                  ),
+                ],
+              ),
+          ],
+        ),
+      ),
+    );
+  }
