@@ -90,3 +90,13 @@ class _NavbarState extends State<Navbar> {
                   ),
                 ),
               ),
+               const SizedBox(width: 16),
+              _cartIcon(context),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+  
+  
