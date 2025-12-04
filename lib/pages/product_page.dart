@@ -150,4 +150,13 @@ class _ProductPageState extends State<ProductPage> {
           style: Theme.of(context).textTheme.bodyLarge,
         ),
         const SizedBox(height: 24),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Size',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
 
