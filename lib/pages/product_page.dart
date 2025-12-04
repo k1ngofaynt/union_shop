@@ -136,4 +136,12 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ],
           )
+          else
+          Text(
+            '\$${product.price.toStringAsFixed(2)}',
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+          ),
 
