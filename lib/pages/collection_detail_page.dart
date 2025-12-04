@@ -111,4 +111,6 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 24),
+                  
                         
