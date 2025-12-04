@@ -144,4 +144,10 @@ class _ProductPageState extends State<ProductPage> {
               fontSize: 20,
             ),
           ),
+          const SizedBox(height: 16),
+        Text(
+          product.description,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+        const SizedBox(height: 24),
 
