@@ -173,3 +173,22 @@ class _CartPageState extends State<CartPage> {
               child: const Text('Proceed to Checkout'),
             ),
           ),
+          const SizedBox(height: 12),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/collections');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: AppColors.secondary,
+                side: const BorderSide(color: AppColors.secondary),
+              ),
+              child: const Text('Continue Shopping'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
