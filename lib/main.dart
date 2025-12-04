@@ -19,15 +19,7 @@ void main() {
 
             // Products Section
             
-                    const SizedBox(height: 48),
-                    GridView.count(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      crossAxisCount:
-                          MediaQuery.of(context).size.width > 600 ? 2 : 1,
-                      crossAxisSpacing: 24,
-                      mainAxisSpacing: 48,
-                      children: const [
+                   
                         ProductCard(
                           title: 'Placeholder Product 1',
                           price: '£10.00',
