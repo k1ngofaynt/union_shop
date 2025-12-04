@@ -207,6 +207,17 @@ class _ProductPageState extends State<ProductPage> {
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
-            ),)
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              children: product.colors.map((color) {
+                final isSelected = _selectedColor == color;
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _selectedColor = color;
+                    });
+                  },
                   
 
