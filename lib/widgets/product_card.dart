@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
                   color: AppColors.background,
                   height: 250,
                   width: double.infinity,
-                  child: Image.network(
+                  child: Image.asset(
                     product.image,
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) {

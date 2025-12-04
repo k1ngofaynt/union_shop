@@ -61,7 +61,7 @@ class _ProductPageState extends State<ProductPage> {
       children: [
         Expanded(
           flex: 1,
-          child: Image.network(
+          child: Image.asset(
             product.image,
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
@@ -84,7 +84,7 @@ class _ProductPageState extends State<ProductPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.network(
+        Image.asset(
           product.image,
           fit: BoxFit.cover,
           width: double.infinity,

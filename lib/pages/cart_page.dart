@@ -233,7 +233,7 @@ class _CartItemWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Image.network(
+          Image.asset(
             item['image'],
             width: 100,
             height: 100,

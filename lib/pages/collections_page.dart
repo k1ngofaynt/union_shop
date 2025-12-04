@@ -112,7 +112,7 @@ class _CollectionCard extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            Image.network(
+            Image.asset(
               collection.image,
               fit: BoxFit.cover,
               width: double.infinity,
