@@ -43,7 +43,7 @@ class AuthPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Email',
                       hintText: 'Enter your email',
@@ -51,7 +51,7 @@ class AuthPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  TextField(
+                  const TextField(
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Password',
@@ -62,16 +62,16 @@ class AuthPage extends StatelessWidget {
                   const SizedBox(height: 24),
                    ElevatedButton(
                     onPressed: () {},
-                    child: Text('Sign In'),
+                    child: const Text('Sign In'),
                   ),
                   const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don't have an account? "),
+                      const Text("Don't have an account? "),
                       TextButton(
                         onPressed: () {},
-                        child: Text('Sign Up'),
+                        child: const Text('Sign Up'),
                       ),
                     ],
                   ),
