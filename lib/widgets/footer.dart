@@ -14,3 +14,23 @@ class Footer extends StatelessWidget {
       child: isMobile ? _buildMobileFooter(context) : _buildDesktopFooter(context),
     );
   }
+  Widget _buildDesktopFooter(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // About
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _footerTitle('About Us'),
+                  const SizedBox(height: 12),
+                  _footerLink(context, 'About Union Shop'),
+                  _footerLink(context, 'Our Story'),
+                  _footerLink(context, 'Contact Us'),
+                ],
+              ),
+            ),
