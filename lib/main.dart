@@ -12,39 +12,7 @@ void main() {
 
 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            // Header
-            const Navbar(currentRoute: '/'),
 
-            // Hero Section
-            SizedBox(
-              height: 400,
-              width: double.infinity,
-              child: Stack(
-                children: [
-                  // Background image
-                  Positioned.fill(
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityPostcard2_1024x1024@2x.jpg?v=1752232561',
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.7),
-                        ),
-                      ),
-                    ),
-                  ),
                   // Content overlay
                   Positioned(
                     left: 24,
