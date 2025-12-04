@@ -86,3 +86,14 @@ class _SalePageState extends State<SalePage> {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 24),
+            child: Text(
+              '${_saleProducts.length} Items on Sale',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.grey[700],
+              ),
+            ),
+          ),
