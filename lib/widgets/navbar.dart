@@ -233,6 +233,18 @@ class _NavbarState extends State<Navbar> {
           setState(() {
             _isMobileMenuOpen = false;
           });
+           },
+        child: Text(
+          label,
+          style: TextStyle(
+            color: isActive ? AppColors.secondary : Colors.red,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
   Widget _cartIcon(BuildContext context) {
     return InkWell(
       onTap: () {
