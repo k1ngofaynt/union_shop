@@ -163,6 +163,7 @@ class _NavbarState extends State<Navbar> {
           _mobileNavLink('Home', '/'),
           _mobileNavLink('Collections', '/collections'),
           _mobileNavLink('About', '/about'),
+          _mobileSaleNavLink('SALE!', '/sale'),
           _mobileNavLink('Cart', '/cart'),
         ],
       ],
@@ -179,6 +180,22 @@ class _NavbarState extends State<Navbar> {
         style: TextStyle(
           color: isActive ? AppColors.secondary : Colors.white,
           fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+        ),
+      ),
+    );
+  }
+  Widget _saleNavLink(BuildContext context, String label, String route) {
+    final isActive = widget.currentRoute == route;
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, route);
+      },
+      child: Text(
+        label,
+        style: TextStyle(
+          color: isActive ? AppColors.secondary : Colors.red,
+          fontWeight: FontWeight.bold,
+          fontSize: 16,
         ),
       ),
     );
