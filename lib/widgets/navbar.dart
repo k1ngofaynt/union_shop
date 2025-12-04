@@ -222,6 +222,17 @@ class _NavbarState extends State<Navbar> {
       ),
     );
   }
+   Widget _mobileSaleNavLink(String label, String route) {
+    final isActive = widget.currentRoute == route;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 12),
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, route);
+          setState(() {
+            _isMobileMenuOpen = false;
+          });
   Widget _cartIcon(BuildContext context) {
     return InkWell(
       onTap: () {
