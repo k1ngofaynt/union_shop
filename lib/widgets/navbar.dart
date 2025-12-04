@@ -40,4 +40,17 @@ class _NavbarState extends State<Navbar> {
       child: isMobile ? _buildMobileNavbar() : _buildDesktopNavbar(context),
     );
   }
-  
+  Widget _buildDesktopNavbar(BuildContext context) {
+    return Row(
+      children: [
+        // Logo
+        Expanded(
+          flex: 1,
+          child: Text(
+            'Union Shop',
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+        ),
