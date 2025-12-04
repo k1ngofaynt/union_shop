@@ -57,4 +57,21 @@ class _ProductPageState extends State<ProductPage> {
       ),
     );
   }
+  Widget _buildDesktopLayout(Product product) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          flex: 1,
+          child: Image.network(
+            product.image,
+            fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) {
+              return Container(
+                color: AppColors.background,
+                child: const Icon(Icons.image_not_supported),
+              );
+            },
+          ),
+        ),
 
