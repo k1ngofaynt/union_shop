@@ -35,3 +35,6 @@ class _SalePageState extends State<SalePage> {
         horizontal: isMobile ? 16 : 64,
         vertical: 32,
       ),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
