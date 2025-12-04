@@ -170,5 +170,17 @@ class _ProductPageState extends State<ProductPage> {
                       _selectedSize = size;
                     });
                   },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: isSelected
+                            ? AppColors.secondary
+                            : AppColors.border,
+                        width: isSelected ? 2 : 1,
+                      ),
                   
 
