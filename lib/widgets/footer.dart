@@ -124,7 +124,7 @@ class Footer extends StatelessWidget {
           ],
         ),
         Text(
-          '© 2025 Union Shop. All rights reserved.',
+          '© 2025, upsu-store',
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
                 color: Colors.white70,
               ),
