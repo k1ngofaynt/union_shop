@@ -104,4 +104,15 @@ class _ProductPageState extends State<ProductPage> {
       ],
     );
   }
+   Widget _buildProductDetails(Product product) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          product.name,
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 16),
 
