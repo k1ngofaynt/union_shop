@@ -21,12 +21,13 @@ class Footer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // About
+             // Opening Hours
             Expanded(
+              flex: 2,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _footerTitle('About Us'),
+                  _footerTitle('Opening Hours'),
                   const SizedBox(height: 12),
                   _footerLink(context, 'About Union Shop'),
                   _footerLink(context, 'Our Story'),
