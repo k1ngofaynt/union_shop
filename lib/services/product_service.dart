@@ -1,6 +1,7 @@
 import 'package:union_shop/models/product.dart';
 import 'package:union_shop/models/collection.dart';
 import 'package:union_shop/utils/image_constants.dart';
+
 class ProductService {
   static final List<Product> _products = [
     Product(
@@ -8,16 +9,16 @@ class ProductService {
       name: 'Graduation Hoodies',
       description: 'Premium graduation hoodie with embroidered logo',
       price: 35.00,
-      image: ImageAssets.productGraduationHoodies,  // ← CHANGED FROM URL
+      image: ImageAssets.productGraduationHoodies, // ← CHANGED FROM URL
       collection: 'graduation',
       isSale: false,
     ),
-     Product(
+    Product(
       id: '2',
       name: 'Signature Hoodie',
       description: 'Essential signature hoodie in classic colors',
       price: 32.99,
-      image: ImageAssets.productSignatureHoodie,  // ← CHANGED FROM URL
+      image: ImageAssets.productSignatureHoodie, // ← CHANGED FROM URL
       collection: 'signature',
       isSale: false,
     ),
@@ -26,7 +27,7 @@ class ProductService {
       name: 'Essential T-Shirt',
       description: 'Comfortable essential t-shirt for everyday wear',
       price: 10.00,
-      image: ImageAssets.productEssentialTshirt,  // ← CHANGED FROM URL
+      image: ImageAssets.productEssentialTshirt, // ← CHANGED FROM URL
       collection: 'signature',
       isSale: false,
     ),
@@ -35,7 +36,7 @@ class ProductService {
       name: 'Limited Edition Zip Hoodies',
       description: 'Exclusive limited edition zip-up hoodies',
       price: 20.00,
-      image: ImageAssets.productZipHoodies,  // ← CHANGED FROM URL
+      image: ImageAssets.productZipHoodies, // ← CHANGED FROM URL
       collection: 'signature',
       isSale: false,
     ),
@@ -45,12 +46,12 @@ class ProductService {
       description: 'Elegant crested tie with university logo',
       price: 15.00,
       originalPrice: 10.99,
-      image: ImageAssets.productCrestedTie,  // ← CHANGED FROM URL
+      image: ImageAssets.productCrestedTie, // ← CHANGED FROM URL
       collection: 'graduation',
       isSale: true,
     ),
   ];
-   static final List<Collection> _collections = [
+  static final List<Collection> _collections = [
     Collection(
       id: 'graduation',
       name: 'Graduation Collection',
@@ -66,9 +67,9 @@ class ProductService {
       productCount: 3,
     ),
   ];
-  
+
   static List<Product> get products => _products;
-  
+
   static Future<Collection?> getCollectionById(String id) async {
     try {
       return _collections.firstWhere((collection) => collection.id == id);
@@ -76,15 +77,18 @@ class ProductService {
       return null;
     }
   }
-  
-  static Future<List<Product>> getProductsByCollection(String collectionId) async {
-    return _products.where((product) => product.collection == collectionId).toList();
+
+  static Future<List<Product>> getProductsByCollection(
+      String collectionId) async {
+    return _products
+        .where((product) => product.collection == collectionId)
+        .toList();
   }
-  
+
   static Future<List<Collection>> getAllCollections() async {
     return _collections;
   }
-  
+
   static Future<Product?> getProductById(String id) async {
     try {
       return _products.firstWhere((product) => product.id == id);

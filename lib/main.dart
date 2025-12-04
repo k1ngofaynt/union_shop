@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: AppColors.primary,
           foregroundColor: Colors.white,
         ),
-         elevatedButtonTheme: ElevatedButtonThemeData(
+        elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.secondary,
             foregroundColor: Colors.white,
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/collections': (context) => const AppShell(page: 'collections'),
         '/cart': (context) => const AppShell(page: 'cart'),
       },
-       onGenerateRoute: (settings) {
+      onGenerateRoute: (settings) {
         if (settings.name?.startsWith('/product/') ?? false) {
           final productId = settings.name?.split('/').last;
           return MaterialPageRoute(
@@ -69,6 +69,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class AppShell extends StatefulWidget {
   final String page;
   final String? productId;
@@ -84,6 +85,7 @@ class AppShell extends StatefulWidget {
   @override
   State<AppShell> createState() => _AppShellState();
 }
+
 class _AppShellState extends State<AppShell> {
   late String _currentRoute;
 
@@ -155,6 +157,3 @@ class _AppShellState extends State<AppShell> {
     }
   }
 }
-
-
-      
