@@ -21,25 +21,7 @@ void main() {
             
                    
                       
-                        ),
-                        ProductCard(
-                          title: 'Placeholder Product 3',
-                          price: '£20.00',
-                          imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-                        ),
-                        ProductCard(
-                          title: 'Placeholder Product 4',
-                          price: '£25.00',
-                          imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+                       
 
             // Footer
             const Footer(),
