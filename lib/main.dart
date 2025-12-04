@@ -9,26 +9,3 @@ import 'package:union_shop/widgets/navbar.dart';
 import 'package:union_shop/widgets/footer.dart';
 import 'package:union_shop/utils/constants.dart';
 void main() {
-
-
-
-
-                
-                        
-                        
-
-            // Products Section
-            
-                   
-                      
-                       
-
-            // Footer
-            const Footer(),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
