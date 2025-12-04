@@ -109,6 +109,20 @@ class Footer extends StatelessWidget {
         const SizedBox(height: 32),
         const Divider(color: Colors.white30),
         const SizedBox(height: 16),
+        // Payment methods
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          alignment: WrapAlignment.center,
+          children: [
+            _paymentIcon('Apple Pay'),
+            _paymentIcon('Mastercard'),
+            _paymentIcon('Visa'),
+            _paymentIcon('PayPal'),
+            _paymentIcon('Google Pay'),
+            _paymentIcon('Shop Pay'),
+          ],
+        ),
         Text(
           '© 2025 Union Shop. All rights reserved.',
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
