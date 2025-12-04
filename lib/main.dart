@@ -10,20 +10,7 @@ import 'package:union_shop/widgets/footer.dart';
 import 'package:union_shop/utils/constants.dart';
 void main() {
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
 
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
-  void navigateToProduct(BuildContext context) {
-    Navigator.pushNamed(context, '/product');
-  }
-
-  void placeholderCallbackForButtons() {
-    // This is the event handler for buttons that don't work yet
-  }
 
   @override
   Widget build(BuildContext context) {
