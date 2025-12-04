@@ -45,4 +45,26 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
               }
 
               final collection = snapshot.data!;
-              
+              return Container(
+                color: AppColors.background,
+                padding: EdgeInsets.all(isMobile ? 16 : 48),
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    Text(
+                      collection.name,
+                      style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      collection.description,
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
