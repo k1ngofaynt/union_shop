@@ -29,3 +29,12 @@ class _CartPageState extends State<CartPage> {
       'image': 'assets/images/product_essential_tshirt.png',
     },
   ];
+  double get subtotal {
+    return cartItems.fold(
+      0,
+      (sum, item) => sum + (item['price'] as double) * (item['quantity'] as int),
+    );
+  }
+
+  double get tax => subtotal * 0.1;
+  double get total => subtotal + tax;
