@@ -115,4 +115,14 @@ class _ProductPageState extends State<ProductPage> {
           ),
         ),
         const SizedBox(height: 16),
+         if (product.isSale && product.originalPrice != null)
+          Row(
+            children: [
+              Text(
+                '\$${product.originalPrice!.toStringAsFixed(2)}',
+                style: const TextStyle(
+                  decoration: TextDecoration.lineThrough,
+                  fontSize: 16,
+                ),
+              ),
 
