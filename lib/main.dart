@@ -8,6 +8,7 @@ import 'package:union_shop/pages/cart_page.dart';
 import 'package:union_shop/widgets/navbar.dart';
 import 'package:union_shop/widgets/footer.dart';
 import 'package:union_shop/utils/constants.dart';
+import 'package:union_shop/pages/sale_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         '/about': (context) => const AppShell(page: 'about'),
         '/collections': (context) => const AppShell(page: 'collections'),
         '/cart': (context) => const AppShell(page: 'cart'),
+        '/sale': (context) => const AppShell(page: 'sale'),
       },
       onGenerateRoute: (settings) {
         if (settings.name?.startsWith('/product/') ?? false) {
@@ -113,6 +115,9 @@ class _AppShellState extends State<AppShell> {
       case 'cart':
         _currentRoute = '/cart';
         break;
+      case 'sale':
+        _currentRoute = '/sale';
+        break;
       case 'product':
         _currentRoute = '/product/${widget.productId}';
         break;
@@ -148,6 +153,8 @@ class _AppShellState extends State<AppShell> {
         return const CollectionsPage();
       case 'cart':
         return const CartPage();
+      case 'sale':
+        return const SalePage();
       case 'product':
         return ProductPage(productId: widget.productId ?? '');
       case 'collectionDetail':
