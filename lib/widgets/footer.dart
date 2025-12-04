@@ -85,7 +85,7 @@ class Footer extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 32),
-        Divider(color: Colors.white30),
+        const Divider(color: Colors.white30),
         const SizedBox(height: 16),
         Text(
           '© 2025 Union Shop. All rights reserved.',
