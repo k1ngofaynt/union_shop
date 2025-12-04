@@ -24,3 +24,34 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
+     return SingleChildScrollView(
+      child: Column(
+        children: [
+          // Hero Section
+          Container(
+            color: AppColors.background,
+            padding: EdgeInsets.all(isMobile ? 16 : 48),
+            child: Column(
+              children: [
+                Text(
+                  'Graduation',
+                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'Graduation season is here — make sure you\'re stocked up and ready to celebrate in style.',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/collections');
+                  },
+                  child: const Text('Browse Collection'),
+                ),
+              ],
+            ),
+          ),
