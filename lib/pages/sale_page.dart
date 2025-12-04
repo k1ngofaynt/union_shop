@@ -9,3 +9,12 @@ class SalePage extends StatefulWidget {
   @override
   State<SalePage> createState() => _SalePageState();
 }
+class _SalePageState extends State<SalePage> {
+  List<Product> _saleProducts = [];
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSaleProducts();
+  }
