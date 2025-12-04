@@ -47,3 +47,26 @@ class _CollectionsPageState extends State<CollectionsPage> {
             ),
           ),
           const SizedBox(height: 32),
+          Padding(
+            padding: EdgeInsets.all(isMobile ? 16 : 32),
+            child: FutureBuilder<List<Collection>>(
+              future: _collections,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                }
+                if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Text('No collections available');
+                }
+                return GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: isMobile ? 1 : 3,
+                    mainAxisSpacing: 24,
+                    crossAxisSpacing: 24,
+                    childAspectRatio: 1.2,
+                  ),
