@@ -137,3 +137,22 @@ class _SalePageState extends State<SalePage> {
                 crossAxisSpacing: 24,
                 mainAxisSpacing: 24,
               ),
+              itemCount: _saleProducts.length,
+              itemBuilder: (context, index) {
+                final product = _saleProducts[index];
+                return ProductCard(
+                  product: product,
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/product/${product.id}',
+                    );
+                  },
+                );
+              },
+            ),
+        ],
+      ),
+    );
+  }
+}
