@@ -100,5 +100,24 @@ class _AppShellState extends State<AppShell> {
       _updateRoute();
     }
   }
+  void _updateRoute() {
+    switch (widget.page) {
+      case 'about':
+        _currentRoute = '/about';
+        break;
+      case 'collections':
+        _currentRoute = '/collections';
+        break;
+      case 'cart':
+        _currentRoute = '/cart';
+        break;
+      case 'product':
+        _currentRoute = '/product/${widget.productId}';
+        break;
+      default:
+        _currentRoute = '/';
+    }
+  }
+
 
       
