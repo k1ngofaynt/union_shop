@@ -65,4 +65,21 @@ class AuthPage extends StatelessWidget {
                     child: Text('Sign In'),
                   ),
                   const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don't have an account? "),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text('Sign Up'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
 
