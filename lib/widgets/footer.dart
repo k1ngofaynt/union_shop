@@ -181,8 +181,17 @@ class Footer extends StatelessWidget {
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {},
-            child: const Text('Subscribe'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.black,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            child: const Text('SUBSCRIBE'),
           ),
+        ),
         ),
         const SizedBox(height: 24),
         Text(
