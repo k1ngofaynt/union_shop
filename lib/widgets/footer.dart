@@ -53,9 +53,12 @@ class Footer extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _footerTitle('Newsletter'),
-                  const SizedBox(height: 12),
-                  TextField(
+                 _footerTitle('Latest Offers'),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Enter your email',
                       border: OutlineInputBorder(
