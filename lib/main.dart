@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const AppShell(),
+      initialRoute: '/',
       routes: {
         '/': (context) => const AppShell(),
         '/about': (context) => const AppShell(page: 'about'),
