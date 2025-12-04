@@ -112,3 +112,29 @@ class _CollectionCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           overflow: Overflow.hidden,
         ),
+        child: Stack(
+          children: [
+            Image.network(
+              collection.image,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: double.infinity,
+              errorBuilder: (context, error, stackTrace) {
+                return Container(
+                  color: AppColors.background,
+                  child: const Icon(Icons.image_not_supported),
+                );
+              },
+            ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withOpacity(0.7),
+                  ],
+                ),
+              ),
+            ),
