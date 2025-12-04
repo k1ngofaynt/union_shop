@@ -96,5 +96,31 @@ class Footer extends StatelessWidget {
       ],
     );
   }
+  Widget _buildMobileFooter(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _footerTitle('About Us'),
+        const SizedBox(height: 12),
+        _footerLink(context, 'About Union Shop'),
+        _footerLink(context, 'Our Story'),
+        const SizedBox(height: 24),
+        _footerTitle('Shop'),
+        const SizedBox(height: 12),
+        _footerLink(context, 'Collections'),
+        _footerLink(context, 'Sale Items'),
+        const SizedBox(height: 24),
+        _footerTitle('Newsletter'),
+        const SizedBox(height: 12),
+        TextField(
+          decoration: InputDecoration(
+            hintText: 'Enter your email',
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+            fillColor: Colors.white,
+            filled: true,
+          ),
+        ),
   
   
