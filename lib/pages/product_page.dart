@@ -270,5 +270,18 @@ class _ProductPageState extends State<ProductPage> {
                     }
                   },
                 ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: AppColors.border),
+                  ),
+                  child: Text(
+                    _quantity.toString(),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
                   
 
