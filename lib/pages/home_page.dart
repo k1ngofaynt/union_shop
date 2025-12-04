@@ -77,3 +77,18 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                 ),
+                  const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                  ),
+                  child: const Text(
+                    'Find Out More',
+                    style: TextStyle(color: AppColors.secondary),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 32),
