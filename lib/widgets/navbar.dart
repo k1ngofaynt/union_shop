@@ -108,6 +108,11 @@ class _NavbarState extends State<Navbar> {
                 ),
               ),
                const SizedBox(width: 16),
+              IconButton(
+                icon: const Icon(Icons.account_circle),
+                color: Colors.white,
+                onPressed: () => Navigator.pushNamed(context, '/auth'),
+              ),
               _cartIcon(context),
             ],
           ),

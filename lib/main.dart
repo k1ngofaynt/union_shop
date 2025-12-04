@@ -5,6 +5,7 @@ import 'package:union_shop/pages/collections_page.dart';
 import 'package:union_shop/pages/collection_detail_page.dart';
 import 'package:union_shop/pages/product_page.dart';
 import 'package:union_shop/pages/cart_page.dart';
+import 'package:union_shop/pages/auth_page.dart';
 import 'package:union_shop/widgets/navbar.dart';
 import 'package:union_shop/widgets/footer.dart';
 import 'package:union_shop/utils/constants.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/collections': (context) => const AppShell(page: 'collections'),
         '/cart': (context) => const AppShell(page: 'cart'),
         '/sale': (context) => const AppShell(page: 'sale'),
+        '/auth': (context) => const AppShell(page: 'auth'),
       },
       onGenerateRoute: (settings) {
         if (settings.name?.startsWith('/product/') ?? false) {
@@ -118,6 +120,9 @@ class _AppShellState extends State<AppShell> {
       case 'sale':
         _currentRoute = '/sale';
         break;
+      case 'auth':
+        _currentRoute = '/auth';
+        break;
       case 'product':
         _currentRoute = '/product/${widget.productId}';
         break;
@@ -155,6 +160,8 @@ class _AppShellState extends State<AppShell> {
         return const CartPage();
       case 'sale':
         return const SalePage();
+      case 'auth':
+        return const AuthPage();
       case 'product':
         return ProductPage(productId: widget.productId ?? '');
       case 'collectionDetail':
