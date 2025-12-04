@@ -283,5 +283,18 @@ class _ProductPageState extends State<ProductPage> {
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
+                IconButton(
+                  icon: const Icon(Icons.add),
+                  onPressed: () {
+                    setState(() {
+                      _quantity++;
+                    });
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 32),
                   
 
