@@ -62,7 +62,7 @@ class _NavbarState extends State<Navbar> {
         Expanded(
           flex: 1,
           child: Text(
-            'Union Shop',
+            'The Union',
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
