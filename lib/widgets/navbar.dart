@@ -188,4 +188,19 @@ class _NavbarState extends State<Navbar> {
       ),
     );
   }
+  Widget _cartIcon(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/cart');
+      },
+      child: const Badge(
+        label: Text('2'),
+        child: Icon(
+          Icons.shopping_cart,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
   
