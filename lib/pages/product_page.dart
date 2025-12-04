@@ -1,28 +1,6 @@
 
 
-                  const SizedBox(height: 24),
-
-                  // Product name
-                  const Text(
-                    'Placeholder Product Name',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-
-                  const SizedBox(height: 12),
-
-                  // Product price
-                  const Text(
-                    '£15.00',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF4d2963),
-                    ),
-                  ),
+   
 
                   const SizedBox(height: 24),
 
