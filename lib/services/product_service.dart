@@ -1,4 +1,5 @@
 import 'package:union_shop/models/product.dart';
+import 'package:union_shop/models/collection.dart';
 import 'package:union_shop/utils/image_constants.dart';
 class ProductService {
   static final List<Product> _products = [
@@ -50,4 +51,16 @@ class ProductService {
     ),
   ];
   static List<Product> get products => _products;
+  
+  static Future<Collection?> getCollectionById(String id) async {
+    try {
+      return _collections.firstWhere((collection) => collection.id == id);
+    } catch (e) {
+      return null;
+    }
+  }
+  
+  static Future<List<Product>> getProductsByCollection(String collectionId) async {
+    return _products.where((product) => product.collection == collectionId).toList();
+  }
 }
