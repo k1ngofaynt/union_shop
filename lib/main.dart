@@ -27,4 +27,22 @@ class MyApp extends StatelessWidget {
           backgroundColor: AppColors.primary,
           foregroundColor: Colors.white,
         ),
+         elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.secondary,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 24,
+              vertical: 12,
+            ),
+          ),
+        ),
+      ),
+      home: const AppShell(),
+      routes: {
+        '/': (context) => const AppShell(),
+        '/about': (context) => const AppShell(page: 'about'),
+        '/collections': (context) => const AppShell(page: 'collections'),
+        '/cart': (context) => const AppShell(page: 'cart'),
+      },
       
