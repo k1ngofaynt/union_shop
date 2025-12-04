@@ -308,5 +308,12 @@ class _ProductPageState extends State<ProductPage> {
                 ),
               );
             },
+            child: const Text('Add to Cart'),
+          ),
+        ),
+      ],
+    );
+  }
+}
                   
 
