@@ -16,3 +16,17 @@ class CollectionDetailPage extends StatefulWidget {
   @override
   State<CollectionDetailPage> createState() => _CollectionDetailPageState();
 }
+class _CollectionDetailPageState extends State<CollectionDetailPage> {
+  late Future<Collection?> _collection;
+  late Future<List<Product>> _products;
+  String _sortBy = 'featured';
+
+  @override
+  void initState() {
+    super.initState();
+    _collection = ProductService.getCollectionById(widget.collectionId);
+    _products = ProductService.getProductsByCollection(widget.collectionId);
+  }
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
