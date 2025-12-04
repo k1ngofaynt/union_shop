@@ -10,9 +10,10 @@ class ImageAssets {
       'assets/images/products/product_zip_hoodies.png';
   static const String productCrestedTie =
       'assets/images/products/product_crested_tie.png';
-      static const String collectionGraduationBanner =
+  static const String collectionGraduationBanner =
       'assets/images/collections/collection_graduation_banner.png';
   static const String collectionSignatureBanner =
       'assets/images/collections/collection_signature_banner.png';
   static const String collectionSaleBanner =
-      'assets/images/collections/collection_sale_banner.png';}
+      'assets/images/collections/collection_sale_banner.png';
+}
