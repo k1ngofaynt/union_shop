@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:union_shop/utils/constants.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -21,13 +20,13 @@ class Footer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             // Opening Hours
+            // Opening Hours
             Expanded(
               flex: 2,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  footerTitle('Opening Hours'),
+                  _footerTitle('Opening Hours'),
                   const SizedBox(height: 16),
                   _footerText('❄️ Winter Break Closure Dates ❄️'),
                   const SizedBox(height: 8),
@@ -37,43 +36,57 @@ class Footer extends StatelessWidget {
                   const SizedBox(height: 12),
                   _footerText('------------------------'),
                   const SizedBox(height: 12),
-                   _footerText('(Term Time)'),
+                  _footerText('(Term Time)'),
                   _footerText('Monday - Friday 10am - 4pm'),
                   const SizedBox(height: 8),
                   _footerText('(Outside of Term Time / Consolidation Weeks)'),
                   _footerText('Monday - Friday 10am - 3pm'),
                   const SizedBox(height: 8),
                   _footerText('Purchase online 24/7'),
-                  
                 ],
               ),
             ),
             const SizedBox(width: 40),
+            // Help and Information
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 _footerTitle('Latest Offers'),
+                  _footerTitle('Help and Information'),
+                  const SizedBox(height: 16),
+                  _footerLink(context, 'Search'),
+                  _footerLink(context, 'Terms & Conditions of Sale Policy'),
+                ],
+              ),
+            ),
+            const SizedBox(width: 40),
+            // Newsletter
+            Expanded(
+              flex: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _footerTitle('Latest Offers'),
                   const SizedBox(height: 16),
                   Row(
                     children: [
                       Expanded(
                         child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Enter your email',
-                      hintStyle: TextStyle(color: Colors.grey[600]),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4),
-                         borderSide: BorderSide.none,
-                      ),
-                      fillColor: Colors.white,
-                      filled: true,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                          decoration: InputDecoration(
+                            hintText: 'Enter your email',
+                            hintStyle: TextStyle(color: Colors.grey[600]),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(4),
+                              borderSide: BorderSide.none,
+                            ),
+                            fillColor: Colors.white,
+                            filled: true,
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                           ),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                   ElevatedButton(
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
@@ -98,8 +111,10 @@ class Footer extends StatelessWidget {
                       ),
                       IconButton(
                         icon: const Icon(Icons.tag, color: Colors.white),
-                    onPressed: () {},
-                    tooltip: 'Twitter',
+                        onPressed: () {},
+                        tooltip: 'Twitter',
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -123,6 +138,7 @@ class Footer extends StatelessWidget {
             _paymentIcon('Shop Pay'),
           ],
         ),
+        const SizedBox(height: 16),
         Text(
           '© 2025, upsu-store',
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
