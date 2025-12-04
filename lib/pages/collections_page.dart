@@ -21,8 +21,7 @@ class _CollectionsPageState extends State<CollectionsPage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-     return SingleChildScrollView(
-      child: Column(
+     return Column(
         children: [
           // Header
           Container(
@@ -88,8 +87,7 @@ class _CollectionsPageState extends State<CollectionsPage> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }
 class _CollectionCard extends StatelessWidget {

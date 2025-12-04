@@ -128,9 +128,15 @@ class _AppShellState extends State<AppShell> {
         children: [
           Navbar(currentRoute: _currentRoute),
           Expanded(
-            child: _buildContent(),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  _buildContent(),
+                  const Footer(),
+                ],
+              ),
+            ),
           ),
-          const Footer(),
         ],
       ),
     );

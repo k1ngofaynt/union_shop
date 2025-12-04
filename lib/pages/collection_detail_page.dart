@@ -30,8 +30,7 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-    return SingleChildScrollView(
-      child: Column(
+    return Column(
         children: [
           // Header
           FutureBuilder<Collection?>(
@@ -154,8 +153,7 @@ class _CollectionDetailPageState extends State<CollectionDetailPage> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }
                   

@@ -7,9 +7,8 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-    return SingleChildScrollView(
-      child: Column(
-        children: [
+    return Column(
+      children: [
           // Header
           Container(
             color: AppColors.background,
@@ -45,8 +44,7 @@ class AboutPage extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }
 class _ParagraphSection extends StatelessWidget {

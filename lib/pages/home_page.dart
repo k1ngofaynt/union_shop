@@ -27,10 +27,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-     return SingleChildScrollView(
-      child: Column(
-        children: [
-          // Hero Section
+     return Column(
+      children: [
+        // Hero Section
           Container(
             color: AppColors.background,
             padding: EdgeInsets.all(isMobile ? 16 : 48),
@@ -148,8 +147,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }
                     

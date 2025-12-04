@@ -32,8 +32,7 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-     return SingleChildScrollView(
-      child: Padding(
+     return Padding(
         padding: EdgeInsets.all(isMobile ? 16 : 32),
         child: FutureBuilder<Product?>(
           future: _product,
@@ -54,8 +53,7 @@ class _ProductPageState extends State<ProductPage> {
                 : _buildDesktopLayout(product);
           },
         ),
-      ),
-    );
+      );
   }
   Widget _buildDesktopLayout(Product product) {
     return Row(
