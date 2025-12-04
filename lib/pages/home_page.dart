@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                ext(
+                Text(
                   'Let\'s create something uniquely you with our personalisation service — From £3 for one line of text!',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -125,6 +125,30 @@ class _HomePageState extends State<HomePage> {
                         crossAxisSpacing: 16,
                         childAspectRatio: 0.75,
                       ),
+                      itemCount: snapshot.data!.length,
+                      itemBuilder: (context, index) {
+                        final product = snapshot.data![index];
+                        return ProductCard(
+                          product: product,
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/product/${product.id}',
+                            );
+                          },
+                        );
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
                     
 
                 
