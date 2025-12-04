@@ -38,3 +38,33 @@ class _CartPageState extends State<CartPage> {
 
   double get tax => subtotal * 0.1;
   double get total => subtotal + tax;
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+
+    if (cartItems.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(
+              Icons.shopping_cart_outlined,
+              size: 64,
+              color: AppColors.textLight,
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'Your cart is empty',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/collections');
+              },
+              child: const Text('Continue Shopping'),
+            ),
+          ],
+        ),
+      );
+    }
