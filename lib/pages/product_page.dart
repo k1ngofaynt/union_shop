@@ -159,4 +159,16 @@ class _ProductPageState extends State<ProductPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              children: product.sizes.map((size) {
+                final isSelected = _selectedSize == size;
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _selectedSize = size;
+                    });
+                  },
+                  
 
