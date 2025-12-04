@@ -212,3 +212,24 @@ class _CartPageState extends State<CartPage> {
     );
   }
 }
+class _CartItemWidget extends StatelessWidget {
+  final Map<String, dynamic> item;
+  final VoidCallback onRemove;
+  final Function(int) onQuantityChanged;
+
+  const _CartItemWidget({
+    Key? key,
+    required this.item,
+    required this.onRemove,
+    required this.onQuantityChanged,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        border: Border.all(color: AppColors.border),
+        borderRadius: BorderRadius.circular(8),
+      ),
