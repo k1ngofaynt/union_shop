@@ -92,3 +92,14 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SizedBox(height: 32),
+           Padding(
+            padding: EdgeInsets.all(isMobile ? 16 : 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Featured Products',
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
