@@ -15,3 +15,26 @@ class CollectionCard extends StatefulWidget {
   @override
   State<CollectionCard> createState() => _CollectionCardState();
 }
+class _CollectionCardState extends State<CollectionCard> {
+  bool _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: GestureDetector(
+        onTap: widget.onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(_isHovered ? 0.15 : 0.08),
+                blurRadius: _isHovered ? 12 : 8,
+                offset: Offset(0, _isHovered ? 6 : 4),
+              ),
+            ],
+          ),
