@@ -7,3 +7,8 @@ class SlideshowCarousel extends StatefulWidget {
   @override
   State<SlideshowCarousel> createState() => _SlideshowCarouselState();
 }
+class _SlideshowCarouselState extends State<SlideshowCarousel> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+  Timer? _timer;
+  bool _isPlaying = true;
