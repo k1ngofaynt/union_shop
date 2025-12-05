@@ -26,4 +26,3 @@ class ImageAssets {
   static const String slideApartment =
       'assets/images/apartment.png';
 }
-
