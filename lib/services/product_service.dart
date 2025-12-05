@@ -72,7 +72,7 @@ Product(
 ),
 Product(
   id: '8',
-  name: 'Essential T-Shirt',
+  name: 'Blue Signature T-Shirt',
   description: 'Comfortable essential t-shirt for everyday wear',
   price: 12.99,
   image: ImageAssets.productEssentialTshirt,
