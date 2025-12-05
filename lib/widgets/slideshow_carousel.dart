@@ -160,7 +160,7 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       decoration: BoxDecoration(
         color: slide.backgroundColor,
       ),
-      hild: Center(
+      child: Center(
         child: Padding(
           padding: EdgeInsets.all(isMobile ? 24 : 48),
           child: Column(
@@ -176,3 +176,17 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 16),
+              Text(
+                slide.description,
+                style: TextStyle(
+                  fontSize: isMobile ? 16 : 20,
+                  color: Colors.white.withOpacity(0.9),
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton(
+                onPressed: () {
+                  // Dummy link - no functionality
+                },
