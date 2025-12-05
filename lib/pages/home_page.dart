@@ -212,16 +212,18 @@ class _HomePageState extends State<HomePage> {
                   child: const Text('Browse Collection'),
                 ),
               ],
-              const SizedBox(height: 48),
-
-// OUR RANGE Section
-Padding(
-  padding: EdgeInsets.symmetric(
-    horizontal: isMobile ? 16 : 48,
-    vertical: 32,
-  ),
-  child: Column(
-    children: [
+            ),
+          ),
+          const SizedBox(height: 48),
+          
+          // OUR RANGE Section
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: isMobile ? 16 : 48,
+              vertical: 32,
+            ),
+            child: Column(
+              children: [
                 Text(
                   'OUR RANGE',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -272,11 +274,7 @@ Padding(
               ],
             ),
           ),
-
-const SizedBox(height: 32),
           
-            ),
-          ),
           const SizedBox(height: 32),
           // Print Shack Section
           Container(
