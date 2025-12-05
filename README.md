@@ -15,14 +15,21 @@ A modern, responsive e-commerce application built with Flutter for selling unive
 ## ✨ Key Features
 
 ### Core Functionality
-- **🏠 Home Page**: Dynamic landing page with slideshow carousel, promotional sale section, graduation collection showcase, signature range products, and custom print shack information
-- **🛍️ Product Collections**: Three distinct collections (Signature, Limited Editions, Graduation) with detailed product listings
+- **🏠 Home Page**: Dynamic landing page with image-based slideshow carousel (Essential Sale T-Shirt, Print Shack, Domino's Pizza, Apartment), promotional sale section, graduation collection showcase, signature range products, OUR RANGE collections section, and custom print shack information
+- **🛍️ Product Collections**: Four distinct collections (Essential, Signature, Limited Editions, Graduation) with detailed product listings and interactive collection cards
 - **📦 Product Details**: Individual product pages with images, descriptions, pricing, size selection, and quantity controls
 - **🛒 Shopping Cart**: Full cart management with add/remove items, quantity adjustment, and price calculations
 - **💰 Sale Section**: Dedicated page showcasing discounted items with original and sale pricing
 - **👤 User Authentication**: Login and registration interface with form validation
 - **📱 Responsive Design**: Fully responsive layout adapting to mobile (< 768px), tablet (768px-1024px), and desktop (> 1024px) screens
 - **🧭 Navigation**: Scrollable navbar with logo, menu links, search functionality, and cart icon with item count badge
+
+### Recent Updates
+- **OUR RANGE Section**: Added a new homepage section displaying all collections in an interactive grid layout (2 columns on mobile, 4 on desktop) inspired by Upper Print Shack website design
+- **Collection Card Widget**: Created reusable collection card component with hover effects and click navigation
+- **Slideshow Enhancement**: Updated carousel to use background images instead of solid colors with dark overlay for better visual appeal
+- **New Essential Collection**: Added Essential collection featuring Essential Hoodie, Essential Crested Tie, and Essential Sale T-Shirt
+- **Product Updates**: Renamed products including "Blue Signature T-Shirt" and reorganized collection assignments
 
 ---
 
