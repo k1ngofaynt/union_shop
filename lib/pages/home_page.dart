@@ -121,6 +121,21 @@ class _HomePageState extends State<HomePage> {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const Center(child: CircularProgressIndicator());
                     }
+                     if (snapshot.hasData && snapshot.data!.isNotEmpty) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 24),
+                        child: GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: isMobile ? 2 : 4,
+                            mainAxisSpacing: 16,
+                            crossAxisSpacing: 16,
+                            childAspectRatio: 0.75,
+                          ),
+                          itemCount: snapshot.data!.length,
+                          itemBuilder: (context, index) {
+                            
                     
 
                 ElevatedButton(
