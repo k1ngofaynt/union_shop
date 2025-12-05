@@ -112,11 +112,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                Text(
-                  'Graduation season is here — make sure you\'re stocked up and ready to celebrate in style.',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
+                
                 const SizedBox(height: 24),
                 FutureBuilder<List<Product>>(
                   future: ProductService.getProductsByCollection('graduation'),
