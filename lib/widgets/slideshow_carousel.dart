@@ -25,3 +25,9 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       buttonText: 'FIND OUT MORE',
       backgroundColor: Color(0xFF1E3A5F),
     ),
+    SlideItem(
+      title: 'Hungry',
+      description: 'We got this',
+      buttonText: 'ORDER DOMINOS PIZZA NOW',
+      backgroundColor: Color(0xFF5F2B3E),
+    ),
