@@ -72,10 +72,10 @@ Product(
 ),
 Product(
   id: '8',
-  name: 'Signature T-Shirt',
-  description: 'Classic signature t-shirt with premium quality',
+  name: 'Essential T-Shirt',
+  description: 'Comfortable essential t-shirt for everyday wear',
   price: 12.99,
-  image: ImageAssets.productSignatureTshirt,
+  image: ImageAssets.productEssentialTshirt,
   collection: 'signature',
   isSale: false,
 ),
