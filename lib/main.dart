@@ -135,11 +135,11 @@ class _AppShellState extends State<AppShell> {
     return Scaffold(
       body: Column(
         children: [
-          Navbar(currentRoute: _currentRoute),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  Navbar(currentRoute: _currentRoute),
                   _buildContent(),
                   const Footer(),
                 ],
