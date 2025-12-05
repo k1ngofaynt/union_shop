@@ -38,3 +38,28 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       backgroundColor: Color(0xFF3E5F2B),
     ),
   ];
+  @override
+  void initState() {
+    super.initState();
+    _startAutoPlay();
+  }
+
+  void _startAutoPlay() {
+    _timer?.cancel();
+    if (_isPlaying) {
+      _timer = Timer.periodic(const Duration(seconds: 5), (timer) {
+        if (_currentPage < _slides.length - 1) {
+          _currentPage++;
+        } else {
+          _currentPage = 0;
+        }
+        if (_pageController.hasClients) {
+          _pageController.animateToPage(
+            _currentPage,
+            duration: const Duration(milliseconds: 350),
+            curve: Curves.easeInOut,
+          );
+        }
+      });
+    }
+  }
