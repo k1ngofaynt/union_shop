@@ -47,7 +47,7 @@ class ProductService {
   price: 10.99,  // Changed from 15.00
   originalPrice: 15.00,  // Changed from 10.99
   image: ImageAssets.productCrestedTie,
-  collection: 'limited-editions',
+  collection: 'essential',
   isSale: true,
 ),
 Product(
@@ -57,7 +57,7 @@ Product(
   price: 24.99,
   originalPrice: 32.00,
   image: ImageAssets.productSignatureHoodie,
-  collection: 'signature',
+  collection: 'essential',
   isSale: true,
 ),
 Product(
@@ -67,7 +67,7 @@ Product(
   price: 6.99,
   originalPrice: 10.00,
   image: ImageAssets.productSaleTshirt,
-  collection: 'signature',
+  collection: 'essential',
   isSale: true,
 ),
 Product(
@@ -81,6 +81,13 @@ Product(
 ),
   ];
   static final List<Collection> _collections = [
+    Collection(
+      id: 'essential',
+      name: 'Essential',
+      description: 'Essential Hoodie, Essential Crested Tie, and Essential Sale T-Shirt',
+      image: ImageAssets.productSignatureHoodie,
+      productCount: 3,
+    ),
     Collection(
       id: 'signature',
       name: 'Signature',
