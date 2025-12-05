@@ -24,10 +24,10 @@ class ProductService {
     ),
     Product(
       id: '3',
-      name: 'Essential T-Shirt',
-      description: 'Comfortable essential t-shirt for everyday wear',
+      name: 'Signature T-Shirt',
+      description: 'Classic signature t-shirt with premium quality',
       price: 10.00,
-      image: ImageAssets.productEssentialTshirt, // ← CHANGED FROM URL
+      image: ImageAssets.productSignatureTshirt, // ← CHANGED FROM URL
       collection: 'signature',
       isSale: false,
     ),
@@ -47,7 +47,7 @@ class ProductService {
   price: 10.99,  // Changed from 15.00
   originalPrice: 15.00,  // Changed from 10.99
   image: ImageAssets.productCrestedTie,
-  collection: 'graduation',
+  collection: 'limited-editions',
   isSale: true,
 ),
 Product(
