@@ -37,7 +37,7 @@ class ProductService {
       description: 'Exclusive limited edition zip-up hoodies',
       price: 20.00,
       image: ImageAssets.productZipHoodies, // ← CHANGED FROM URL
-      collection: 'signature',
+      collection: 'limited-editions',
       isSale: false,
     ),
    Product(
