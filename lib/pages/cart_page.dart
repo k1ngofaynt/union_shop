@@ -36,8 +36,7 @@ class _CartPageState extends State<CartPage> {
     );
   }
 
-  double get tax => subtotal * 0.1;
-  double get total => subtotal + tax;
+ double get total => subtotal;
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
@@ -150,7 +149,6 @@ class _CartPageState extends State<CartPage> {
           const SizedBox(height: 16),
           _summaryRow('Subtotal', '\$${subtotal.toStringAsFixed(2)}'),
           const SizedBox(height: 8),
-          _summaryRow('Tax (10%)', '\$${tax.toStringAsFixed(2)}'),
           const Divider(),
           _summaryRow(
             'Total',
