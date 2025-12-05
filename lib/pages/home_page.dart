@@ -58,6 +58,15 @@ class _HomePageState extends State<HomePage> {
       FutureBuilder<List<Product>>(
         future: _saleProducts,
         builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+            return Text('Error: ${snapshot.error}');
+          }
+          f (!snapshot.hasData || snapshot.data!.isEmpty) {
+            return const Text('No sale products available');
+          }
           
         },
       ),
