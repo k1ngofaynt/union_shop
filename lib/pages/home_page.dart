@@ -135,6 +135,23 @@ class _HomePageState extends State<HomePage> {
                           ),
                           itemCount: snapshot.data!.length,
                           itemBuilder: (context, index) {
+                            final product = snapshot.data![index];
+                            return ProductCard(
+                              product: product,
+                              onTap: () {
+                                Navigator.pushNamed(
+                                  context,
+                                  '/product/${product.id}',
+                                );
+                              },
+                            );
+                          },
+                        ),
+                      );
+                    }
+                    return const SizedBox.shrink();
+                  },
+                ),
                             
                     
 
