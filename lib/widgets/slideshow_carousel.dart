@@ -63,3 +63,13 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       });
     }
   }
+  void _togglePlayPause() {
+    setState(() {
+      _isPlaying = !_isPlaying;
+      if (_isPlaying) {
+        _startAutoPlay();
+      } else {
+        _timer?.cancel();
+      }
+    });
+  }
