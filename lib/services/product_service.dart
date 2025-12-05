@@ -42,7 +42,7 @@ class ProductService {
     ),
    Product(
   id: '5',
-  name: 'Crested Tie',
+  name: 'Essential Crested Tie',
   description: 'Elegant crested tie with university logo',
   price: 10.99,  // Changed from 15.00
   originalPrice: 15.00,  // Changed from 10.99
@@ -62,7 +62,7 @@ Product(
 ),
 Product(
   id: '7',
-  name: 'Sale T-Shirt',
+  name: 'Essential Sale T-Shirt',
   description: 'Classic university t-shirt on sale',
   price: 6.99,
   originalPrice: 10.00,
