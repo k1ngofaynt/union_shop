@@ -134,3 +134,23 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
               }),
             ),
           ),
+          Positioned(
+            bottom: 20,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: IconButton(
+                onPressed: _togglePlayPause,
+                icon: Icon(
+                  _isPlaying ? Icons.pause : Icons.play_arrow,
+                  color: Colors.white,
+                  size: 32,
+                ),
+                tooltip: _isPlaying ? 'Pause slideshow' : 'Play slideshow',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
