@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           if (snapshot.hasError) {
             return Text('Error: ${snapshot.error}');
           }
-          f (!snapshot.hasData || snapshot.data!.isEmpty) {
+          if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Text('No sale products available');
           }
           return GridView.builder(
