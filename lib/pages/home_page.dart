@@ -256,6 +256,27 @@ Padding(
               crossAxisSpacing: 24,
               childAspectRatio: 0.85,
             ),
+            itemCount: snapshot.data!.length,
+            itemBuilder: (context, index) {
+              final collection = snapshot.data![index];
+              return CollectionCard(
+                collection: collection,
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    '/collection/${collection.id}',
+                  );
+                },
+              );
+            },
+          );
+        },
+      ),
+    ],
+  ),
+),
+
+const SizedBox(height: 32),
           
             ),
           ),
