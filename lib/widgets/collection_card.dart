@@ -65,3 +65,15 @@ class _CollectionCardState extends State<CollectionCard> {
                           );
                         },
                       ),
+                       // Overlay on hover
+                      AnimatedOpacity(
+                        duration: const Duration(milliseconds: 200),
+                        opacity: _isHovered ? 0.1 : 0,
+                        child: Container(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
