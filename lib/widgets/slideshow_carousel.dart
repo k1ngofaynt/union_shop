@@ -19,3 +19,9 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       buttonText: 'BROWSE COLLECTION',
       backgroundColor: Color(0xFF2B5F44),
     ),
+    SlideItem(
+      title: 'THE PRINT SHACK',
+      description: 'Lets create something uniquely you with our personalisation service — From £3 for one line of text!',
+      buttonText: 'FIND OUT MORE',
+      backgroundColor: Color(0xFF1E3A5F),
+    ),
