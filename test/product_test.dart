@@ -14,3 +14,11 @@ void main() {
         collection: 'test',
         isSale: false,
       );
+      expect(product.id, '1');
+      expect(product.name, 'Test Product');
+      expect(product.description, 'Test Description');
+      expect(product.price, 19.99);
+      expect(product.image, 'assets/images/test.png');
+      expect(product.collection, 'test');
+      expect(product.isSale, false);
+    });
