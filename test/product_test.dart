@@ -42,3 +42,13 @@ void main() {
         expect(product.collection, 'signature');
       }
     });
+     test('should get sale products', () async {
+      final saleProducts = await ProductService.getSaleProducts();
+
+      expect(saleProducts, isNotEmpty);
+      for (var product in saleProducts) {
+        expect(product.isSale, true);
+      }
+    });
+  });
+}
