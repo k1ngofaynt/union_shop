@@ -48,3 +48,20 @@ class _CollectionCardState extends State<CollectionCard> {
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(8),
                   ),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.asset(
+                        widget.collection.image,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            color: AppColors.background,
+                            child: const Icon(
+                              Icons.image_not_supported,
+                              size: 48,
+                              color: Colors.grey,
+                            ),
+                          );
+                        },
+                      ),
