@@ -160,3 +160,19 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       decoration: BoxDecoration(
         color: slide.backgroundColor,
       ),
+      hild: Center(
+        child: Padding(
+          padding: EdgeInsets.all(isMobile ? 24 : 48),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                slide.title,
+                style: TextStyle(
+                  fontSize: isMobile ? 28 : 48,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
