@@ -115,3 +115,22 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
                       curve: Curves.easeInOut,
                     );
                   },
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                    width: 12,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: _currentPage == index
+                          ? Colors.white
+                          : Colors.white.withOpacity(0.5),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                );
+              }),
+            ),
+          ),
