@@ -222,6 +222,28 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          const SizedBox(height: 32),
+          // Print Shack Section
+          Container(
+            color: AppColors.secondary,
+            padding: EdgeInsets.all(isMobile ? 16 : 48),
+            child: Column(
+              children: [
+                Text(
+                  'The Print Shack',
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'Let\'s create something uniquely you with our personalisation service — From £3 for one line of text!',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    color: Colors.white,
+                  ),
+               
         ],
       );
   }
