@@ -19,4 +19,11 @@ class ImageAssets {
       'assets/images/product_sale_tshirt.png';
   static const String productSignatureTshirt =
       'assets/images/product_signature_tshirt.png';
+  static const String slidePrintShack =
+      'assets/images/print_shack.png';
+  static const String slideDominosPizza =
+      'assets/images/dominos_pizza.png';
+  static const String slideApartment =
+      'assets/images/apartment.png';
 }
+
