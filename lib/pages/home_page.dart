@@ -23,7 +23,10 @@ class _HomePageState extends State<HomePage> {
     @override
   void initState() {
     super.initState();
-    _featuredProducts = Future.value(ProductService.products);
+    _featuredProducts = Future(() async {
+      final products = await ProductService.getProductsByCollection('signature');
+      return products.where((product) => !product.isSale).toList();
+    });
     _saleProducts = Future.value(
       ProductService.products.where((product) => product.isSale).toList(),
     );
@@ -204,13 +207,14 @@ class _HomePageState extends State<HomePage> {
            Padding(
             padding: EdgeInsets.all(isMobile ? 16 : 32),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Featured Products',
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  'SIGNATURE RANGE',
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
                 FutureBuilder<List<Product>>(
