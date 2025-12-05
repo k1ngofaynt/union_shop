@@ -54,6 +54,18 @@ class _HomePageState extends State<HomePage> {
         ),
         textAlign: TextAlign.center,
       ),
+      const SizedBox(height: 32),
+      FutureBuilder<List<Product>>(
+        future: _saleProducts,
+        builder: (context, snapshot) {
+          // Loading, error, and empty state handling
+          // Grid view displaying sale products in 4 columns (desktop) or 2 (mobile)
+          // Each product card is clickable and navigates to product detail
+        },
+      ),
+    ],
+  ),
+),
           Container(
             color: AppColors.background,
             padding: EdgeInsets.all(isMobile ? 16 : 48),
