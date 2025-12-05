@@ -115,6 +115,14 @@ class _HomePageState extends State<HomePage> {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 24),
+                FutureBuilder<List<Product>>(
+                  future: ProductService.getProductsByCollection('graduation'),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    
+
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/collection/graduation');
