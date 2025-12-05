@@ -34,3 +34,11 @@ void main() {
       expect(product, isNotNull);
       expect(product?.id, '1');
     });
+    test('should get products by collection', () async {
+      final products = await ProductService.getProductsByCollection('signature');
+
+      expect(products, isNotEmpty);
+      for (var product in products) {
+        expect(product.collection, 'signature');
+      }
+    });
