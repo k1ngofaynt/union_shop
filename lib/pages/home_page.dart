@@ -234,6 +234,19 @@ Padding(
         ),
         textAlign: TextAlign.center,
       ),
+      const SizedBox(height: 32),
+      FutureBuilder<List<Collection>>(
+        future: _collections,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+            return Text('Error: ${snapshot.error}');
+          }
+          if (!snapshot.hasData || snapshot.data!.isEmpty) {
+            return const Text('No collections available');
+          }
             ),
           ),
           const SizedBox(height: 32),
