@@ -38,7 +38,7 @@ class _NavbarState extends State<Navbar> {
           width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 8),
           color: const Color(0xFF4d2963),
-          child: Text(
+          child: const Text(
             'BIG SALE! OUR ESSENTIAL RANGE HAS DROPPED IN PRICE! OVER 20% OFF! COME GRAB YOURS WHILE STOCK LASTS!',
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white, fontSize: 16),
@@ -126,7 +126,7 @@ class _NavbarState extends State<Navbar> {
         // Top row: Logo and menu button
         Row(
           children: [
-            Expanded(
+            const Expanded(
               child: Text(
                 'Union Shop',
                 style: TextStyle(
