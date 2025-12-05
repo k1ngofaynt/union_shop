@@ -243,7 +243,21 @@ class _HomePageState extends State<HomePage> {
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: Colors.white,
                   ),
-               
+               ),
+                  const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                  ),
+                  child: const Text(
+                    'Find Out More',
+                    style: TextStyle(color: AppColors.secondary),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       );
   }
