@@ -211,3 +211,17 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
     );
   }
 }
+
+class SlideItem {
+  final String title;
+  final String description;
+  final String buttonText;
+  final Color backgroundColor;
+
+  SlideItem({
+    required this.title,
+    required this.description,
+    required this.buttonText,
+    required this.backgroundColor,
+  });
+}
