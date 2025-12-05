@@ -79,3 +79,24 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
     _pageController.dispose();
     super.dispose();
   }
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+
+    return Container(
+      height: isMobile ? 400 : 500,
+      child: Stack(
+        children: [
+          // Slideshow
+          PageView.builder(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                _currentPage = index;
+              });
+            },
+            itemCount: _slides.length,
+            itemBuilder: (context, index) {
+              return _buildSlide(_slides[index], isMobile);
+            },
+          ),
