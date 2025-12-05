@@ -247,31 +247,31 @@ Padding(
                     return GridView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: isMobile ? 2 : 4,
-              mainAxisSpacing: 24,
-              crossAxisSpacing: 24,
-              childAspectRatio: 0.85,
+             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: isMobile ? 2 : 4,
+                        mainAxisSpacing: 24,
+                        crossAxisSpacing: 24,
+                        childAspectRatio: 0.85,
+                      ),
+                      itemCount: snapshot.data!.length,
+                      itemBuilder: (context, index) {
+                        final collection = snapshot.data![index];
+                        return CollectionCard(
+                          collection: collection,
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/collection/${collection.id}',
+                            );
+                          },
+                        );
+                      },
+                    );
+                  },
+                ),
+              ],
             ),
-            itemCount: snapshot.data!.length,
-            itemBuilder: (context, index) {
-              final collection = snapshot.data![index];
-              return CollectionCard(
-                collection: collection,
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/collection/${collection.id}',
-                  );
-                },
-              );
-            },
-          );
-        },
-      ),
-    ],
-  ),
-),
+          ),
 
 const SizedBox(height: 32),
           
