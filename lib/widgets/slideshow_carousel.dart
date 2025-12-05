@@ -154,3 +154,9 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       ),
     );
   }
+  Widget _buildSlide(SlideItem slide, bool isMobile) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: slide.backgroundColor,
+      ),
