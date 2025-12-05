@@ -82,19 +82,7 @@ Product(
   ];
   static final List<Collection> _collections = [
     Collection(
-      id: 'graduation',
-      name: 'Graduation Collection',
-      description: 'Official graduation apparel and accessories',
-      image: ImageAssets.productGraduationHoodies,
-      productCount: 2,
-    ),
-    Collection(
-      id: 'signature',
-      name: 'Signature Collection',
-      description: 'Essential pieces for everyday style',
-      image: ImageAssets.productSignatureHoodie,
-      productCount: 3,
-    ),
+      
   ];
 
   static List<Product> get products => _products;
