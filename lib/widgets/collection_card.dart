@@ -106,5 +106,4 @@ class _CollectionCardState extends State<CollectionCard> {
     );
   }
 }
-                      
-
+                    
