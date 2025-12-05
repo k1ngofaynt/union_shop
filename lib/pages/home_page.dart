@@ -3,6 +3,7 @@ import 'package:union_shop/models/product.dart';
 import 'package:union_shop/models/collection.dart';
 import 'package:union_shop/services/product_service.dart';
 import 'package:union_shop/widgets/product_card.dart';
+import 'package:union_shop/widgets/slideshow_carousel.dart';
 import 'package:union_shop/utils/constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,6 +30,9 @@ class _HomePageState extends State<HomePage> {
     final isMobile = MediaQuery.of(context).size.width < 768;
      return Column(
       children: [
+        // Slideshow Carousel
+        const SlideshowCarousel(),
+        const SizedBox(height: 32),
         // Hero Section
           Container(
             color: AppColors.background,
