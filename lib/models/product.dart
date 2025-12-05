@@ -7,7 +7,6 @@ class Product {
   final String image;
   final String collection;
   final List<String> sizes;
-  final List<String> colors;
   bool isSale;
   Product({
     required this.id,
@@ -18,7 +17,6 @@ class Product {
     required this.image,
     required this.collection,
     this.sizes = const ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-    this.colors = const ['Black', 'White', 'Navy'],
     this.isSale = false,
   });
 }

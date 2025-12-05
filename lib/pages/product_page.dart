@@ -17,7 +17,6 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   late Future<Product?> _product;
   late String _selectedSize;
-  late String _selectedColor;
   late int _quantity;
 
   @override
@@ -25,7 +24,6 @@ class _ProductPageState extends State<ProductPage> {
     super.initState();
     _product = ProductService.getProductById(widget.productId);
     _selectedSize = 'M';
-    _selectedColor = 'Black';
     _quantity = 1;
   }
 
@@ -184,55 +182,6 @@ class _ProductPageState extends State<ProductPage> {
                     ),
                     child: Text(
                       size,
-                      style: TextStyle(
-                        fontWeight: isSelected
-                            ? FontWeight.bold
-                            : FontWeight.normal,
-                      ),
-                    ),
-                  ),
-                );
-              }).toList(),
-            ),
-          ],
-        ),
-        const SizedBox(height: 24),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Color',
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              children: product.colors.map((color) {
-                final isSelected = _selectedColor == color;
-                return GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _selectedColor = color;
-                    });
-                  },
-                   child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12,
-                    ),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: isSelected
-                            ? AppColors.secondary
-                            : AppColors.border,
-                        width: isSelected ? 2 : 1,
-                      ),
-                        borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Text(
-                      color,
                       style: TextStyle(
                         fontWeight: isSelected
                             ? FontWeight.bold
