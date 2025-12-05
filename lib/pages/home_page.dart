@@ -216,6 +216,24 @@ _collections = ProductService.getAllCollections();
                   child: const Text('Browse Collection'),
                 ),
               ],
+              const SizedBox(height: 48),
+
+// OUR RANGE Section
+Padding(
+  padding: EdgeInsets.symmetric(
+    horizontal: isMobile ? 16 : 48,
+    vertical: 32,
+  ),
+  child: Column(
+    children: [
+      Text(
+        'OUR RANGE',
+        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+          fontWeight: FontWeight.bold,
+          letterSpacing: 1.5,
+        ),
+        textAlign: TextAlign.center,
+      ),
             ),
           ),
           const SizedBox(height: 32),
