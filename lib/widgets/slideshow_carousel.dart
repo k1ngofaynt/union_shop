@@ -159,6 +159,16 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       width: double.infinity,
       decoration: BoxDecoration(
         color: slide.backgroundColor,
+        image: slide.backgroundImage != null
+            ? DecorationImage(
+                image: AssetImage(slide.backgroundImage!),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.5),
+                  BlendMode.darken,
+                ),
+              )
+            : null,
       ),
       child: Center(
         child: Padding(
