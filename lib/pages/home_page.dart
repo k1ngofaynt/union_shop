@@ -5,6 +5,7 @@ import 'package:union_shop/services/product_service.dart';
 import 'package:union_shop/widgets/product_card.dart';
 import 'package:union_shop/widgets/slideshow_carousel.dart';
 import 'package:union_shop/utils/constants.dart';
+import 'package:union_shop/widgets/collection_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   late Future<List<Product>> _featuredProducts;
   late Future<List<Product>> _saleProducts;
   // Collections for navigation - can be expanded later
-  final List<Collection> _collections = [];
+ late Future<List<Collection>> _collections;
   
   // Helper to get available collections
   List<Collection> get collections => _collections;
@@ -28,8 +29,9 @@ class _HomePageState extends State<HomePage> {
       return products.where((product) => !product.isSale).toList();
     });
     _saleProducts = Future.value(
-      ProductService.products.where((product) => product.isSale).toList(),
-    );
+  ProductService.products.where((product) => product.isSale).toList(),
+);
+_collections = ProductService.getAllCollections();
   }
 
   @override
