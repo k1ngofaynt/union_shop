@@ -6,7 +6,7 @@ class ProductService {
   static final List<Product> _products = [
     Product(
       id: '1',
-      name: 'Graduation Hoodies',
+      name: 'Graduation Hoodie',
       description: 'Premium graduation hoodie with embroidered logo',
       price: 35.00,
       image: ImageAssets.productGraduationHoodies, // ← CHANGED FROM URL
@@ -33,9 +33,9 @@ class ProductService {
     ),
     Product(
       id: '4',
-      name: 'Limited Edition Zip Hoodies',
-      description: 'Exclusive limited edition zip-up hoodies',
-      price: 20.00,
+      name: 'Limited Edition Zip Hoodie',
+      description: 'Exclusive limited edition zip-up hoodie',
+      price: 45.00,
       image: ImageAssets.productZipHoodies, // ← CHANGED FROM URL
       collection: 'limited-editions',
       isSale: false,
@@ -84,16 +84,23 @@ Product(
     Collection(
       id: 'signature',
       name: 'Signature',
-      description: 'Signature T-shirt and Hoodie collection',
+      description: 'Signature T-Shirt and Signature Hoodie',
       image: ImageAssets.productSignatureHoodie,
       productCount: 2,
     ),
     Collection(
       id: 'limited-editions',
       name: 'Limited Editions',
-      description: 'Exclusive limited edition items including crested tie and zip hoodie',
+      description: 'Crested Tie and Limited Edition Zip Hoodie',
       image: ImageAssets.productZipHoodies,
       productCount: 2,
+    ),
+    Collection(
+      id: 'graduation',
+      name: 'Graduation Collection',
+      description: 'Graduation Hoodie',
+      image: ImageAssets.productGraduationHoodies,
+      productCount: 1,
     ),
   ];
 
