@@ -190,3 +190,24 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
                 onPressed: () {
                   // Dummy link - no functionality
                 },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: slide.backgroundColor,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isMobile ? 24 : 40,
+                    vertical: isMobile ? 14 : 18,
+                  ),
+                  textStyle: TextStyle(
+                    fontSize: isMobile ? 14 : 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                child: Text(slide.buttonText),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
