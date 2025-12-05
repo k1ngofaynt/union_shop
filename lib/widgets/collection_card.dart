@@ -38,3 +38,13 @@ class _CollectionCardState extends State<CollectionCard> {
               ),
             ],
           ),
+           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Image Section
+              Expanded(
+                flex: 3,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(8),
+                  ),
