@@ -22,3 +22,9 @@ void main() {
       expect(product.collection, 'test');
       expect(product.isSale, false);
     });
+    test('should get all products from service', () async {
+      final products = ProductService.products;
+
+      expect(products, isNotEmpty);
+      expect(products.length, greaterThan(0));
+    });
