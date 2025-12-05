@@ -82,7 +82,19 @@ Product(
   ];
   static final List<Collection> _collections = [
     Collection(
-      
+      id: 'signature',
+      name: 'Signature',
+      description: 'Signature T-shirt and Hoodie collection',
+      image: ImageAssets.productSignatureHoodie,
+      productCount: 2,
+    ),
+    Collection(
+      id: 'limited-editions',
+      name: 'Limited Editions',
+      description: 'Exclusive limited edition items including crested tie and zip hoodie',
+      image: ImageAssets.productZipHoodies,
+      productCount: 2,
+    ),
   ];
 
   static List<Product> get products => _products;
