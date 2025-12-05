@@ -25,3 +25,12 @@ void main() {
       expect(find.byIcon(Icons.search), findsOneWidget);
       expect(find.byIcon(Icons.shopping_cart), findsOneWidget);
     });
+    testWidgets('should display OUR RANGE section', (tester) async {
+      await tester.pumpWidget(const MyApp());
+      await tester.pumpAndSettle();
+
+      // Check that OUR RANGE heading is present
+      expect(find.text('OUR RANGE'), findsOneWidget);
+    });
+  });
+}
