@@ -17,3 +17,11 @@ void main() {
       // Check that slideshow text is present
       expect(find.textContaining('Essential Range'), findsWidgets);
     });
+    testWidgets('should display navigation elements', (tester) async {
+      await tester.pumpWidget(const MyApp());
+      await tester.pumpAndSettle();
+
+      // Check that navigation icons are present
+      expect(find.byIcon(Icons.search), findsOneWidget);
+      expect(find.byIcon(Icons.shopping_cart), findsOneWidget);
+    });
