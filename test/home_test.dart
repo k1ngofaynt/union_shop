@@ -10,3 +10,10 @@ void main() {
       // Check that the app loads
       expect(find.byType(MaterialApp), findsOneWidget);
     });
+    testWidgets('should display slideshow carousel', (tester) async {
+      await tester.pumpWidget(const MyApp());
+      await tester.pumpAndSettle();
+
+      // Check that slideshow text is present
+      expect(find.textContaining('Essential Range'), findsWidgets);
+    });
