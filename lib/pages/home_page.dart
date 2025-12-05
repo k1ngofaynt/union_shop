@@ -38,6 +38,22 @@ class _HomePageState extends State<HomePage> {
         const SlideshowCarousel(),
         const SizedBox(height: 32),
         // Hero Section
+        Container(
+  width: double.infinity,
+  padding: EdgeInsets.symmetric(
+    horizontal: isMobile ? 16 : 48,
+    vertical: 32,
+  ),
+  child: Column(
+    children: [
+      Text(
+        'ESSENTIAL RANGE - OVER 20% OFF!',
+        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+          fontWeight: FontWeight.bold,
+          letterSpacing: 1.2,
+        ),
+        textAlign: TextAlign.center,
+      ),
           Container(
             color: AppColors.background,
             padding: EdgeInsets.all(isMobile ? 16 : 48),
