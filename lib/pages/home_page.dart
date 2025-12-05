@@ -24,10 +24,10 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     _featuredProducts = Future.value(ProductService.products);
+    _saleProducts = Future.value(
+      ProductService.products.where((product) => product.isSale).toList(),
+    );
   }
-  _saleProducts = Future.value(
-  ProductService.products.where((product) => product.isSale).toList(),
-);
 
   @override
   Widget build(BuildContext context) {
