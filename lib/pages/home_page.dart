@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late Future<List<Product>> _featuredProducts;
+  late Future<List<Product>> _saleProducts;
   // Collections for navigation - can be expanded later
   final List<Collection> _collections = [];
   
@@ -24,6 +25,9 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     _featuredProducts = Future.value(ProductService.products);
   }
+  _saleProducts = Future.value(
+  ProductService.products.where((product) => product.isSale).toList(),
+);
 
   @override
   Widget build(BuildContext context) {
