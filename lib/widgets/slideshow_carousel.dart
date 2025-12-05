@@ -17,25 +17,25 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       title: 'Essential Range - Over 20% OFF!',
       description: 'Over 20% off our Essential Range. Come and grab yours while stock lasts!',
       buttonText: 'BROWSE COLLECTION',
-      backgroundColor: Color(0xFF2B5F44),
+       backgroundImage: ImageAssets.productSaleTshirt,
     ),
     SlideItem(
       title: 'The Print Shack',
       description: 'Lets create something uniquely you with our personalisation service — From £3 for one line of text!',
       buttonText: 'FIND OUT MORE',
-      backgroundColor: Color(0xFF1E3A5F),
+      backgroundImage: ImageAssets.slidePrintShack,
     ),
     SlideItem(
       title: 'Hungry',
       description: 'We got this',
       buttonText: 'ORDER DOMINOS PIZZA NOW',
-      backgroundColor: Color(0xFF5F2B3E),
+      backgroundImage: ImageAssets.slideDominosPizza,
     ),
     SlideItem(
       title: 'What is your next move...',
       description: 'Are you with us?',
       buttonText: 'FIND YOUR STUDENT ACCOMMODATION',
-      backgroundColor: Color(0xFF3E5F2B),
+      backgroundImage: ImageAssets.slideApartment,
     ),
   ];
   @override
