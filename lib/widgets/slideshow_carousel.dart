@@ -31,3 +31,10 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       buttonText: 'ORDER DOMINOS PIZZA NOW',
       backgroundColor: Color(0xFF5F2B3E),
     ),
+    SlideItem(
+      title: 'WHAT IS YOUR NEXT MOVE...',
+      description: 'Are you with us?',
+      buttonText: 'FIND YOUR STUDENT ACCOMMODATION',
+      backgroundColor: Color(0xFF3E5F2B),
+    ),
+  ];
