@@ -28,3 +28,9 @@ void main() {
       expect(products, isNotEmpty);
       expect(products.length, greaterThan(0));
     });
+    test('should get product by id', () async {
+      final product = await ProductService.getProductById('1');
+
+      expect(product, isNotNull);
+      expect(product?.id, '1');
+    });
