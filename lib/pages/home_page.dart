@@ -247,6 +247,16 @@ Padding(
           if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Text('No collections available');
           }
+          return GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: isMobile ? 2 : 4,
+              mainAxisSpacing: 24,
+              crossAxisSpacing: 24,
+              childAspectRatio: 0.85,
+            ),
+          
             ),
           ),
           const SizedBox(height: 32),
