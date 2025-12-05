@@ -155,15 +155,6 @@ class _HomePageState extends State<HomePage> {
                     return const SizedBox.shrink();
                   },
                 ),
-                            
-                    
-
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/collection/graduation');
-                  },
-                  child: const Text('Browse Collection'),
-                ),
               ],
             ),
           ),
@@ -218,6 +209,13 @@ class _HomePageState extends State<HomePage> {
                       },
                     );
                   },
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/collection/signature');
+                  },
+                  child: const Text('Browse Collection'),
                 ),
               ],
             ),
