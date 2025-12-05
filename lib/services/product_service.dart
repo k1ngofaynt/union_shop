@@ -70,6 +70,15 @@ Product(
   collection: 'signature',
   isSale: true,
 ),
+Product(
+  id: '8',
+  name: 'Signature T-Shirt',
+  description: 'Classic signature t-shirt with premium quality',
+  price: 12.99,
+  image: ImageAssets.productSignatureTshirt,
+  collection: 'signature',
+  isSale: false,
+),
   ];
   static final List<Collection> _collections = [
     Collection(

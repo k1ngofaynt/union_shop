@@ -17,4 +17,6 @@ class ImageAssets {
       'assets/images/collection_sale_banner.png';
   static const String productSaleTshirt =
       'assets/images/product_sale_tshirt.png';
+  static const String productSignatureTshirt =
+      'assets/images/product_signature_tshirt.png';
 }
