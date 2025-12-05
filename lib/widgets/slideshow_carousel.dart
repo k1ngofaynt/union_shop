@@ -73,3 +73,9 @@ class _SlideshowCarouselState extends State<SlideshowCarousel> {
       }
     });
   }
+  @override
+  void dispose() {
+    _timer?.cancel();
+    _pageController.dispose();
+    super.dispose();
+  }
